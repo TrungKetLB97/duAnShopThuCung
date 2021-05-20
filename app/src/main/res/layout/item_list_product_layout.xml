@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/thuCung_listProduct_imgProduct"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/no_image"/>
+
+        <TextView
+            android:id="@+id/thuCung_listProduct_tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="165dp"
+            android:text="Tên"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/thuCung_listProduct_tvCanNang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="205dp"
+            android:text="Cân Nặng"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/thuCung_listProduct_tvTinhTrangSk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="245dp"
+            android:layout_marginBottom="8dp"
+            android:text="Tình trạng SK "
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
