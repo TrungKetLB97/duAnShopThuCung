@@ -42,6 +42,13 @@
                 android:src="@drawable/no_image" />
 
             <TextView
+                android:id="@+id/thuCung_detail_tvIDProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="ID"
+                android:textSize="20dp" />
+            <TextView
                 android:id="@+id/thuCung_detail_tvNameProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

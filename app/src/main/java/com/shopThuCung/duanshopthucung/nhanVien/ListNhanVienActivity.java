@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.shopThuCung.duanshopthucung.R;
 
-public class listNhanVienActivity extends AppCompatActivity {
+public class ListNhanVienActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,5 +16,8 @@ public class listNhanVienActivity extends AppCompatActivity {
     }
 
     public void searchNhanVien(View view) {
+    }
+
+    public void postNhanVien(View view) {
     }
 }
