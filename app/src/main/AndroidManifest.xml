@@ -9,7 +9,11 @@
         android:roundIcon="@drawable/thucung"
         android:supportsRtl="true"
         android:theme="@style/Theme.DuAnShopThuCung">
-        <activity android:name=".nhanVien.addNhanVienActivity"></activity>
+        <activity android:name=".Customer.AddCustomerActivity"></activity>
+        <activity android:name=".Customer.ChiTietCustomerActivity" />
+        <activity android:name=".Customer.EditCustomerActivity" />
+        <activity android:name=".Customer.ListCustomerActivity" />
+        <activity android:name=".nhanVien.addNhanVienActivity" />
         <activity android:name=".nhanVien.editNhanVienActivity" />
         <activity android:name=".nhanVien.chiTietNhanVienActivity" />
         <activity android:name=".nhanVien.ListNhanVienActivity" />
