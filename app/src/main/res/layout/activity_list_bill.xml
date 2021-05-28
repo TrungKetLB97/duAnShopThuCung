@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    tools:context=".Bill.ListBillActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDanhSachHoaDon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffca60"
+        app:title="HÓA ĐƠN"
+        app:titleMarginStart="150dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchBill"
+        android:layout_margin="8dp"
+        android:hint="Tìm kiếm hóa đơn theo mã"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:padding="10dp"
+        android:id="@+id/rvBill"/>
+
+    <ImageButton
+        android:id="@+id/Bill_themBill"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="330dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/purple_200"
+        android:onClick="postBill"
+        android:src="@drawable/ic_baseline_add_circle_24" />
+
+</LinearLayout>

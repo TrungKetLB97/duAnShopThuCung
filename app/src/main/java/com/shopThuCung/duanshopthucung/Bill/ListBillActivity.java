@@ -1,4 +1,4 @@
-package com.shopThuCung.duanshopthucung.Customer;
+package com.shopThuCung.duanshopthucung.Bill;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,16 +7,14 @@ import android.view.View;
 
 import com.shopThuCung.duanshopthucung.R;
 
-public class EditCustomerActivity extends AppCompatActivity {
+public class ListBillActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_customer);
+        setContentView(R.layout.activity_list_bill);
     }
 
-    public void editKhachHang(View view) {
+    public void postBill(View view) {
     }
-
-
 }

@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:padding="5dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -12,13 +13,24 @@
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/khachHang_listCustimer_tvNameKH"
+            android:id="@+id/bill_listBill_tvNameKHBill"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="165dp"
             android:padding="6dp"
-            android:text="Tên Khách Hàng"
+            android:text="Khách Hàng"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/bill_listBill_tvTongTienBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="215dp"
+            android:padding="6dp"
+            android:text="Tổng Tiền"
             android:textSize="20dp"
             android:textStyle="bold"
             />
