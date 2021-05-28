@@ -17,7 +17,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="165dp"
-            android:padding="6dp"
             android:text="Tên Khách Hàng"
             android:textSize="20dp"
             android:textStyle="bold"

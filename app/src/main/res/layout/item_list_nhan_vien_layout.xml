@@ -10,6 +10,13 @@
         android:layout_margin="8dp"
         android:padding="10dp">
 
+        <ImageView
+            android:id="@+id/nhanVien_listNhanVien_imgProduct"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/no_image"/>
+
         <TextView
             android:id="@+id/nhanVien_listNhanVien_tvName"
             android:layout_width="match_parent"
@@ -17,8 +24,8 @@
             android:layout_marginLeft="4dp"
             android:layout_marginTop="165dp"
             android:paddingLeft="4dp"
-            android:text="Tên Nhân Viên"
-            android:textSize="24dp"
+            android:text="Tên"
+            android:textSize="30dp"
             android:textStyle="bold"
             />
 

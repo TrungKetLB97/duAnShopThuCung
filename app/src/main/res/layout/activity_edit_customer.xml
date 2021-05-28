@@ -7,7 +7,7 @@
     tools:context=".Customer.EditCustomerActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_edit_khachHang"
+        android:id="@+id/toolbar_edit_KhachHang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple_700"
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="SỬA KHÁCH HÀNG"
-        app:titleMarginStart="130dp"/>
+        app:titleMarginStart="120dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutidkh"
@@ -28,14 +28,14 @@
         app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_edit_khachHang">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_edit_KhachHang">
 
         <EditText
             android:id="@+id/khachHang_editKhachHang_edtIDKH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
-            android:hint="ID khach hang" />
+            android:hint="ID Khách Hàng" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -116,7 +116,7 @@
 
 
     <Button
-        android:id="@+id/nhanVien_editNhanVien_btnSua"
+        android:id="@+id/bill_editBill_btnSua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/round_bg"
