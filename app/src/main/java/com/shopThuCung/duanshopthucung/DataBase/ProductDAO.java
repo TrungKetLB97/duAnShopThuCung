@@ -14,14 +14,14 @@ public class ProductDAO {
     private final SQLiteDatabase db;
     private final SQLiteOpenHelper helper;
     public static final String PRODUCT_TABLE_NAME = "product";
-    public static final String SQL_PRODUCT = " CREATE TABLE NAME product (" +
+    public static final String SQL_PRODUCT = " CREATE TABLE product (" +
             "productID TEXT PRIMARY KEY , " +
             "productImage BLOB ," +
             "productTen TEXT ," +
             "productLoai TEXT ," +
             "productTuoi TEXT ,"+
             "ProductTinhTrangSK TEXT ,"+
-            "productGiaTien TEXT ," +
+            "productGiaTien TEXT" +
             ");";
 
     public ProductDAO(final Context context){

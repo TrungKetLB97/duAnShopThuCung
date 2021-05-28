@@ -26,7 +26,6 @@
         android:layout_marginHorizontal="64dp"
         android:layout_marginTop="8dp"
         app:cardCornerRadius="20dp"
-        android:onClick="addNhanVienPicture1"
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,7 +36,7 @@
             android:id="@+id/nhanVien_editNhanVien_imgPicture"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/addimage"
+            android:src="@drawable/nhanvien"
             android:layout_gravity="center"/>
     </androidx.cardview.widget.CardView>
     <com.google.android.material.textfield.TextInputLayout
@@ -89,11 +88,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <EditText
-            android:id="@+id/nhanVien_editNhanVien_edtTuoi"
+            android:id="@+id/nhanVien_editNhanVien_edtChucVu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
-            android:hint="Tuổi" />
+            android:hint="Chức Vụ" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -108,11 +107,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
         <EditText
-            android:id="@+id/nhanVien_editNhanVien_edtNgaySinh"
+            android:id="@+id/nhanVien_editNhanVien_edtSdt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
-            android:hint="Ngày Sinh" />
+            android:hint="SĐT" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -127,11 +126,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
         <EditText
-            android:id="@+id/nhanVien_editNhanVien_edtChứcVu"
+            android:id="@+id/nhanVien_editNhanVien_edtDiaChi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
-            android:hint="Chức Vụ" />
+            android:hint="Địa Chỉ" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout0"
@@ -145,29 +144,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout1">
 
         <EditText
-            android:id="@+id/nhanVien_editNhanVien_edtSDT"
+            android:id="@+id/nhanVien_editNhanVien_edtNgaySinh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
-            android:hint="SDT" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout0">
-
-        <EditText
-            android:id="@+id/nhanVien_editNhanVien_edtDiaChi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_bg"
-            android:hint="Địa Chỉ" />
+            android:hint="Ngày Sinh" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

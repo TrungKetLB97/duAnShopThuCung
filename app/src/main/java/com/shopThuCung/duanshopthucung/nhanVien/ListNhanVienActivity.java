@@ -2,6 +2,7 @@ package com.shopThuCung.duanshopthucung.nhanVien;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -19,5 +20,6 @@ public class ListNhanVienActivity extends AppCompatActivity {
     }
 
     public void postNhanVien(View view) {
+        startActivity(new Intent(this, addNhanVienActivity.class));
     }
 }

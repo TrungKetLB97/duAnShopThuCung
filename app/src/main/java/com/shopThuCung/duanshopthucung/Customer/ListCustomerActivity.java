@@ -2,6 +2,7 @@ package com.shopThuCung.duanshopthucung.Customer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -19,5 +20,6 @@ public class ListCustomerActivity extends AppCompatActivity {
     }
 
     public void postKhachHang(View view) {
+        startActivity(new Intent(this, AddCustomerActivity.class));
     }
 }

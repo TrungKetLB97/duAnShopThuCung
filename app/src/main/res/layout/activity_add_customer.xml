@@ -68,11 +68,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <EditText
-            android:id="@+id/khachHang_addKhachHang_edtSanPham"
+            android:id="@+id/khachHang_addKhachHang_edtSdt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
-            android:hint="Sản Phẩm" />
+            android:hint="SĐT" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -87,30 +87,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
         <EditText
-            android:id="@+id/khachHang_addKhachHang_edtLoaiSP"
+            android:id="@+id/khachHang_addKhachHang_edtDiaChi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
-            android:hint="Loại Sản Phẩm" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
-
-        <EditText
-            android:id="@+id/khachHang_addKhachHang_edtGiaTien"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_bg"
-            android:hint="Thành Tiền" />
+            android:hint="Địa Chỉ" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -126,6 +107,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout1" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
