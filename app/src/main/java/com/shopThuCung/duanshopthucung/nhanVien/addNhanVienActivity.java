@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class addNhanVienActivity extends AppCompatActivity {
-
     public EditText edtId, edtName, edtChucVu, edtSdt, edtDiaChi, edtNgaySinh;
     NhanVienDAO nhanVienDAO;
     List<NhanVien> list;

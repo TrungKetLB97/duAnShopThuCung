@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddCustomerActivity extends AppCompatActivity {
-
     public EditText edtId, edtName, edtSdt, edtDiaChi;
     List<KhachHang> khachHangList;
     KhachHangDAO khachHangDAO;

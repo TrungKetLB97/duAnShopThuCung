@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListNhanVienActivity extends AppCompatActivity {
-
     List<NhanVien> nhanVienList;
     NhanVienDAO nhanVienDAO;
     ListView lvNV;

@@ -12,7 +12,6 @@ import com.shopThuCung.duanshopthucung.R;
 import java.util.List;
 
 public class NhanVienAdapter extends BaseAdapter {
-
     private List<NhanVien> nhanVienList;
     private Context context;
 

@@ -59,6 +59,14 @@
                 android:padding="6dp"
                 android:text="Tên Sản Phẩm"
                 android:textSize="20dp" />
+            <TextView
+                android:id="@+id/bill_detail_tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="6dp"
+                android:text="date"
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/bill_detail_tvGiaTienBill"

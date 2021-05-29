@@ -5,6 +5,7 @@ public class Bill {
     String tenSP;
     String thanhTien;
     String tenKhachHang;
+    String date;
 
     public Bill() {
     }
@@ -14,6 +15,7 @@ public class Bill {
         this.tenSP = tenSP;
         this.thanhTien = thanhTien;
         this.tenKhachHang = tenKhachHang;
+        this.date = date;
     }
 
     public String getId() {
@@ -46,5 +48,13 @@ public class Bill {
 
     public void setTenKhachHang(String tenKhachHang) {
         this.tenKhachHang = tenKhachHang;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

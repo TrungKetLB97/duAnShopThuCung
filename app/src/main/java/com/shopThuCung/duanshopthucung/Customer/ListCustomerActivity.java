@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListCustomerActivity extends AppCompatActivity {
-
     List<KhachHang> khachHangList;
     KhachHangDAO khachHangDAO;
     ListView lvKH;
@@ -36,7 +35,6 @@ public class ListCustomerActivity extends AppCompatActivity {
     public void addKhachHang(View view) {
         startActivity(new Intent(this,AddCustomerActivity.class));
     }
-
     public void searchKhachHang(View view) {
     }
 }

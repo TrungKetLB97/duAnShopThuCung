@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nhanVien_addNV_edtId" type="id" />
+    <item name="nhanVien_addNV_edtChucVu" type="id" />
+    <item name="nhanVien_addNV_edtSdt" type="id" />
+</resources>

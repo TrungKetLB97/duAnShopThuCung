@@ -12,7 +12,6 @@ import com.shopThuCung.duanshopthucung.R;
 import java.util.List;
 
 public class KhachHangAdapter extends BaseAdapter {
-
     private List<KhachHang> khachHangList;
     private Context context;
 
