@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.shopThuCung.duanshopthucung.DataBase.CustomerDAO;
+import com.shopThuCung.duanshopthucung.MainActivity;
 import com.shopThuCung.duanshopthucung.R;
 
 public class ChiTietCustomerActivity extends AppCompatActivity {
@@ -23,6 +24,7 @@ public class ChiTietCustomerActivity extends AppCompatActivity {
 
         customerDAO = new CustomerDAO(this);
         init();
+
         Intent i = getIntent();
         idKH = i.getStringExtra("IdKH");
         tenKH = i.getStringExtra("TenKH");
@@ -44,10 +46,10 @@ public class ChiTietCustomerActivity extends AppCompatActivity {
 
     public void moveEditKH(View view) {
         Intent intent = new Intent(ChiTietCustomerActivity.this, EditCustomerActivity.class);
-        intent.putExtra("IdKH", idKH);
-        intent.putExtra("TenKH", tenKH);
-        intent.putExtra("SdtKH", sdtKH);
-        intent.putExtra("DiaChiKH", diachiKH);
+        intent.putExtra("IdKH", tvIDKH.getText());
+        intent.putExtra("TenKH", tvTenKH.getText());
+        intent.putExtra("SdtKH", tvSdtKH.getText());
+        intent.putExtra("DiaChiKH", tvDiaChiKH.getText());
         startActivity(intent);
     }
 
@@ -58,5 +60,6 @@ public class ChiTietCustomerActivity extends AppCompatActivity {
         } else{
             Toast.makeText(this, "Xoa thanh cong", Toast.LENGTH_SHORT).show();
         }
+        startActivity(new Intent(ChiTietCustomerActivity.this, MainActivity.class));
     }
 }

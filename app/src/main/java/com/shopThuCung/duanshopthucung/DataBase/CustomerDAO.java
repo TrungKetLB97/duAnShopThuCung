@@ -11,7 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerDAO {
-    public static final String SQL_TABLE_KhachHang = "CREATE TABLE KhachHang ( idKH text primary key, tenKH text, sdtKh text, diaChiKH text)";
+    public static final String SQL_TABLE_KhachHang = "CREATE TABLE KhachHang ( " +
+            "idKH text primary key, tenKH text, sdtKh text, diaChiKH text)";
     public static final String TABLE_NAME = "KhachHang";
     public DataBaseHelper databaseHelper;
     public SQLiteDatabase sqLiteDatabase;
@@ -60,10 +61,10 @@ public class CustomerDAO {
 
     //doc dữ liệu
     public List<Customer> getAllKHString(){
-        List<Customer> list = new ArrayList<Customer>();
+        List<Customer> list = new ArrayList<>();
         Cursor cursor=sqLiteDatabase.query(TABLE_NAME,null,null,null,null,null,null);
         cursor.moveToFirst();
-        while (cursor.isAfterLast()==false){
+        while (!cursor.isAfterLast()){
             Customer customer = new Customer();
             customer.setIdKH(cursor.getString(0));
             customer.setTenKH(cursor.getString(1));

@@ -2,6 +2,7 @@ package com.shopThuCung.duanshopthucung.Customer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.shopThuCung.duanshopthucung.DataBase.CustomerDAO;
+import com.shopThuCung.duanshopthucung.MainActivity;
 import com.shopThuCung.duanshopthucung.R;
 
 import java.lang.reflect.InvocationHandler;
@@ -24,6 +26,7 @@ public class EditCustomerActivity extends AppCompatActivity {
     List<Customer> customerList;
     String idKH, tenKH, sdtKH, diaChiKH;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +66,7 @@ public class EditCustomerActivity extends AppCompatActivity {
         } else{
             Toast.makeText(this, "Sua thanh cong", Toast.LENGTH_SHORT).show();
         }
+        startActivity(new Intent(EditCustomerActivity.this, MainActivity.class));
     }
 
 

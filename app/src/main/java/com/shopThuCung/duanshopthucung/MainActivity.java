@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void khachHang(View view) {
+    public void customer(View view) {
         Intent intent = new Intent(MainActivity.this, ListCustomerActivity.class);
         startActivity(intent);
     }
@@ -48,15 +48,12 @@ public class MainActivity extends AppCompatActivity {
         dialog.setContentView(R.layout.muc_tieu_layout);
         EditText editText = dialog.findViewById(R.id.tvMucTieu);
         Button button = dialog.findViewById(R.id.btnTT);
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RevenueActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putDouble("MT", Double.parseDouble(editText.getText().toString()));
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
+        button.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RevenueActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putDouble("MT", Double.parseDouble(editText.getText().toString()));
+            intent.putExtras(bundle);
+            startActivity(intent);
         });
         dialog.show();
     }

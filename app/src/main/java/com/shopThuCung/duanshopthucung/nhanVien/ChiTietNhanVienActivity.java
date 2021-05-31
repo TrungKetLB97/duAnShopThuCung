@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.shopThuCung.duanshopthucung.Customer.ChiTietCustomerActivity;
 import com.shopThuCung.duanshopthucung.DataBase.NhanVienDAO;
+import com.shopThuCung.duanshopthucung.MainActivity;
 import com.shopThuCung.duanshopthucung.R;
 
 public class ChiTietNhanVienActivity extends AppCompatActivity {
@@ -20,6 +22,7 @@ public class ChiTietNhanVienActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chi_tiet_nhan_vien);
+
         nhanVienDAO = new NhanVienDAO(this);
         init();
 
@@ -66,6 +69,8 @@ public class ChiTietNhanVienActivity extends AppCompatActivity {
         } else{
             Toast.makeText(this, "Xoa thanh cong", Toast.LENGTH_SHORT).show();
         }
+
+        startActivity(new Intent(ChiTietNhanVienActivity.this, MainActivity.class));
 
     }
 }

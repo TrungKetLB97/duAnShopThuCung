@@ -2,12 +2,14 @@ package com.shopThuCung.duanshopthucung.nhanVien;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.shopThuCung.duanshopthucung.DataBase.NhanVienDAO;
+import com.shopThuCung.duanshopthucung.MainActivity;
 import com.shopThuCung.duanshopthucung.R;
 
 import java.util.ArrayList;
@@ -29,13 +31,12 @@ public class AddNhanVienActivity extends AppCompatActivity {
     }
 
     public void init(){
-        edtId = findViewById(R.id.nhanVien_addNV_edtID);
+        edtId = findViewById(R.id.nhanVien_addNV_edtId);
         edtName = findViewById(R.id.nhanVien_addNV_edtName);
         edtChucVu = findViewById(R.id.nhanVien_addNV_edtChucVu);
         edtSdt = findViewById(R.id.nhanVien_addNV_edtSdt);
         edtDiaChi = findViewById(R.id.nhanVien_addNV_edtDiaChi);
         edtNgaySinh = findViewById(R.id.nhanVien_addNV_edtNgaySinh);
-
     }
 
     public void addNhanVien(View view) {
@@ -51,5 +52,6 @@ public class AddNhanVienActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Them Thanh Cong", Toast.LENGTH_SHORT).show();
         }
+        startActivity(new Intent(AddNhanVienActivity.this, MainActivity.class));
     }
 }

@@ -11,7 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NhanVienDAO {
-    public static final String SQL_TABLE_NhanVien = "CREATE TABLE NhanVien ( idNV text primary key, tenNV text, sdtNV text, chucVuNV text, diaChiNV text, ngaySinhNV text)";
+    public static final String SQL_TABLE_NhanVien = "CREATE TABLE NhanVien ( " +
+            "idNV text primary key, " +
+            "tenNV text, " +
+            "sdtNV text, " +
+            "chucVuNV text, " +
+            "diaChiNV text, " +
+            "ngaySinhNV text)";
     public static final String TABLE_NAME = "NhanVien";
     public DataBaseHelper databaseHelper;
     public SQLiteDatabase sqLiteDatabase;
@@ -64,7 +70,7 @@ public class NhanVienDAO {
 
     //doc dữ liệu
     public List<NhanVien> getAllNVString(){
-        List<NhanVien> list = new ArrayList<NhanVien>();
+        List<NhanVien> list = new ArrayList<>();
         Cursor cursor=sqLiteDatabase.query(TABLE_NAME,null,null,null,null,null,null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()){

@@ -13,8 +13,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(ProductDAO.SQL_PRODUCT);
-        db.execSQL(BillDAO.SQL_Bill);
+        //db.execSQL(ProductDAO.SQL_PRODUCT);
+        //db.execSQL(BillDAO.SQL_Bill);
         db.execSQL(CustomerDAO.SQL_TABLE_KhachHang);
         db.execSQL(NhanVienDAO.SQL_TABLE_NhanVien);
     }

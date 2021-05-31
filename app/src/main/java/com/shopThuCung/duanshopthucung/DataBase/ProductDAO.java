@@ -14,7 +14,7 @@ public class ProductDAO {
     private final SQLiteDatabase db;
     private final SQLiteOpenHelper helper;
     public static final String PRODUCT_TABLE_NAME = "product";
-    public static final String SQL_PRODUCT = " CREATE TABLE NAME product (" +
+    public static final String SQL_PRODUCT = " CREATE TABLE product (" +
             "productID TEXT PRIMARY KEY , " +
             "productImage BLOB ," +
             "productTen TEXT ," +
@@ -32,7 +32,7 @@ public class ProductDAO {
         List<Product> listProduct = new ArrayList<>();
         Cursor curcor = db.query(PRODUCT_TABLE_NAME,null,null,null,null,null,null);
         curcor.moveToFirst();
-        while (curcor.isAfterLast() == false){
+        while (!curcor.isAfterLast()){
             Product product = new Product();
             product.setProductId(curcor.getString(curcor.getColumnIndex("productID")));
             product.setProductImage(curcor.getBlob(curcor.getColumnIndex("productImage")));

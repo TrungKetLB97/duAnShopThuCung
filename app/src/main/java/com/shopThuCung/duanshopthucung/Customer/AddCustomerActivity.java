@@ -2,12 +2,14 @@ package com.shopThuCung.duanshopthucung.Customer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.shopThuCung.duanshopthucung.DataBase.CustomerDAO;
+import com.shopThuCung.duanshopthucung.MainActivity;
 import com.shopThuCung.duanshopthucung.R;
 
 import java.util.ArrayList;
@@ -45,5 +47,6 @@ public class AddCustomerActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Them Thanh Cong", Toast.LENGTH_SHORT).show();
         }
+        startActivity(new Intent(AddCustomerActivity.this, MainActivity.class));
     }
 }
