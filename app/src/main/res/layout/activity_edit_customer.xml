@@ -19,24 +19,35 @@
         app:title="SỬA KHÁCH HÀNG"
         app:titleMarginStart="120dp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutidkh"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="64dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_edit_KhachHang">
 
-        <EditText
-            android:id="@+id/khachHang_editKhachHang_edtIDKH"
+        <ImageView
+            android:id="@+id/nhanVien_editNhanVien_imgPicture"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_bg"
-            android:hint="ID Khách Hàng" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="match_parent"
+            android:src="@drawable/khachhang"
+            android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_margin="16dp"
+        android:id="@+id/khachHang_editKhachHang_tvID"
+        android:text="ID: "
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -47,7 +58,7 @@
         app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutidkh">
+        app:layout_constraintTop_toBottomOf="@+id/khachHang_editKhachHang_tvID">
 
         <EditText
             android:id="@+id/khachHang_editKhachHang_edtNameKH"
@@ -69,11 +80,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <EditText
-            android:id="@+id/khachHang_editKhachHang_edtSanPham"
+            android:id="@+id/khachHang_editKhachHang_edtSdtKH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
-            android:hint="Sản Phẩm" />
+            android:hint="SDT" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -88,32 +99,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
         <EditText
-            android:id="@+id/khachHang_editKhachHang_edtLoaiSP"
+            android:id="@+id/khachHang_editKhachHang_edtDiaChiKH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
-            android:hint="Loại Sản Phẩm" />
+            android:hint="Địa Chỉ" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
-
-        <EditText
-            android:id="@+id/khachHang_editKhachHang_edtGiaTien"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_bg"
-            android:hint="Thành Tiền" />
-    </com.google.android.material.textfield.TextInputLayout>
-
 
     <Button
         android:id="@+id/bill_editBill_btnSua"
@@ -127,6 +118,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout1" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

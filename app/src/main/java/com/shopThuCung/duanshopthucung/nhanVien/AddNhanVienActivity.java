@@ -13,7 +13,7 @@ import com.shopThuCung.duanshopthucung.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class addNhanVienActivity extends AppCompatActivity {
+public class AddNhanVienActivity extends AppCompatActivity {
     public EditText edtId, edtName, edtChucVu, edtSdt, edtDiaChi, edtNgaySinh;
     NhanVienDAO nhanVienDAO;
     List<NhanVien> list;
@@ -21,17 +21,21 @@ public class addNhanVienActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_nhan_vien);
+        init();
 
-        edtId = findViewById(R.id.nhanVien_addNV_edtId);
+        nhanVienDAO = new NhanVienDAO(this);
+        list = new ArrayList<>();
+        list = nhanVienDAO.getAllNVString();
+    }
+
+    public void init(){
+        edtId = findViewById(R.id.nhanVien_addNV_edtID);
         edtName = findViewById(R.id.nhanVien_addNV_edtName);
         edtChucVu = findViewById(R.id.nhanVien_addNV_edtChucVu);
         edtSdt = findViewById(R.id.nhanVien_addNV_edtSdt);
         edtDiaChi = findViewById(R.id.nhanVien_addNV_edtDiaChi);
         edtNgaySinh = findViewById(R.id.nhanVien_addNV_edtNgaySinh);
 
-        nhanVienDAO = new NhanVienDAO(this);
-        list = new ArrayList<NhanVien>();
-        list = nhanVienDAO.getAllNVString();
     }
 
     public void addNhanVien(View view) {

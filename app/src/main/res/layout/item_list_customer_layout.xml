@@ -11,6 +11,12 @@
         android:layout_margin="8dp"
         android:padding="10dp">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/khachhang"/>
+
         <TextView
             android:id="@+id/khachHang_listCustimer_tvNameKH"
             android:layout_width="match_parent"

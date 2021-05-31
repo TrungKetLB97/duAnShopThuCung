@@ -36,9 +36,7 @@ public class NhanVienAdapter extends BaseAdapter {
     }
 
     private class ViewHolder{
-        TextView tvID;
         TextView tvName;
-        TextView tvChucVu;
     }
 
     @Override
@@ -46,19 +44,15 @@ public class NhanVienAdapter extends BaseAdapter {
         ViewHolder viewHolder = null;
         NhanVien nv = (NhanVien) getItem(position);
         if (convertView == null){
-            convertView = LayoutInflater.from(context).inflate(R.layout.nhan_vien_item,parent,false);
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_list_nhan_vien_layout,parent,false);
             viewHolder = new ViewHolder();
-            viewHolder.tvID = convertView.findViewById(R.id.nhanVien_itemNhanVien_tvId);
-            viewHolder.tvName = convertView.findViewById(R.id.nhanVien_itemNhanVien_tvName);
-            viewHolder.tvChucVu = convertView.findViewById(R.id.nhanVien_itemNhanVien_tvChucVu);
+            viewHolder.tvName = convertView.findViewById(R.id.nhanVien_listNhanVien_tvName);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        viewHolder.tvID.setText(nv.getIdNV());
         viewHolder.tvName.setText(nv.getTenNV());
-        viewHolder.tvChucVu.setText(nv.getChucVuNV());
         return convertView;
     }
 }

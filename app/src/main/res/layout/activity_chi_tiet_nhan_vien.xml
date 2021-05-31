@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".nhanVien.chiTietNhanVienActivity">
+    tools:context=".nhanVien.ChiTietNhanVienActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_post_chiTiet"
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:src="@drawable/no_image" />
+                android:src="@drawable/nhanvien" />
 
             <TextView
                 android:id="@+id/nhanVien_detail_tvIDNhanVien"
@@ -48,8 +48,9 @@
                 android:layout_margin="8dp"
                 android:text="ID"
                 android:textSize="20dp" />
+
             <TextView
-                android:id="@+id/nhanVien_detail_tvNameNhanVien"
+                android:id="@+id/nhanVien_detail_tvTenNhanVien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -57,27 +58,11 @@
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/nhanVien_detail_tvTuoiNhanVien"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="Tuổi"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/nhanVien_detail_tvNgaySinhNhanVien"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="Ngày Sinh"
-                android:textSize="20dp" />
-
-            <TextView
                 android:id="@+id/nhanVien_detail_tvChucVuNhanVien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Chức Vụ"
+                android:text="Chức vụ"
                 android:textSize="20dp" />
 
             <TextView
@@ -93,6 +78,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:text="Địa Chỉ"
+                android:textSize="20dp" />
+            <TextView
+                android:id="@+id/nhanVien_detail_tvNgaySinhNhanVien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Ngày Sinh"
                 android:textSize="20dp" />
         </LinearLayout>
 
@@ -115,7 +107,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginLeft="80dp"
             android:layout_marginBottom="10dp"
-            android:text="Edit" />
+            android:onClick="moveEditNV"
+            android:text="Sửa" />
         <Button
             android:id="@+id/nhanVien_detail_btnDeleteNhanVien"
             android:layout_width="wrap_content"
@@ -123,7 +116,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginLeft="50dp"
             android:layout_marginBottom="10dp"
-            android:text="Delete" />
+            android:onClick="DeleteNV"
+            android:text="Xóa" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

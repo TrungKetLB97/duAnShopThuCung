@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".nhanVien.addNhanVienActivity">
+    tools:context=".nhanVien.AddNhanVienActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_add_nhanVien"
@@ -26,7 +26,6 @@
         android:layout_marginHorizontal="64dp"
         android:layout_marginTop="8dp"
         app:cardCornerRadius="20dp"
-        android:onClick="addNhanVienPicture1"
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,7 +36,7 @@
             android:id="@+id/nhanVien_addNV_imgPicture"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/addimage"
+            android:src="@drawable/nhanvien"
             android:layout_gravity="center"/>
     </androidx.cardview.widget.CardView>
     <com.google.android.material.textfield.TextInputLayout

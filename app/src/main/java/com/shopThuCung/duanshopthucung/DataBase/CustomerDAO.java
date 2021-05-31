@@ -5,30 +5,30 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.shopThuCung.duanshopthucung.Customer.KhachHang;
+import com.shopThuCung.duanshopthucung.Customer.Customer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class KhachHangDAO {
+public class CustomerDAO {
     public static final String SQL_TABLE_KhachHang = "CREATE TABLE KhachHang ( idKH text primary key, tenKH text, sdtKh text, diaChiKH text)";
     public static final String TABLE_NAME = "KhachHang";
     public DataBaseHelper databaseHelper;
     public SQLiteDatabase sqLiteDatabase;
     private Context context;
 
-    public KhachHangDAO(Context context) {
+    public CustomerDAO(Context context) {
         this.context = context;
         databaseHelper = new DataBaseHelper(context);
         sqLiteDatabase = databaseHelper.getWritableDatabase();
     }
 
-    public int insertKH(KhachHang khachHang){
+    public int insertKH(Customer customer){
         ContentValues values = new ContentValues();
-        values.put("idKH", khachHang.getIdKH());
-        values.put("tenKH", khachHang.getTenKH());
-        values.put("sdtKH", khachHang.getSdtKH());
-        values.put("diaChiKH", khachHang.getDiaChiKH());
+        values.put("idKH", customer.getIdKH());
+        values.put("tenKH", customer.getTenKH());
+        values.put("sdtKH", customer.getSdtKH());
+        values.put("diaChiKH", customer.getDiaChiKH());
         if(sqLiteDatabase.insert(TABLE_NAME,null,values)<0){
             return -1;
         }
@@ -37,13 +37,13 @@ public class KhachHangDAO {
         }
     }
 
-    public int updateKH(KhachHang khachHang){
+    public int updateKH(Customer customer){
         ContentValues values = new ContentValues();
-        values.put("idKH", khachHang.getIdKH());
-        values.put("tenKH", khachHang.getTenKH());
-        values.put("sdtKH", khachHang.getSdtKH());
-        values.put("diaChiKH", khachHang.getDiaChiKH());
-        if(sqLiteDatabase.update(TABLE_NAME,values,"idNV =?", new String[]{khachHang.getIdKH()})<0){
+        values.put("idKH", customer.getIdKH());
+        values.put("tenKH", customer.getTenKH());
+        values.put("sdtKH", customer.getSdtKH());
+        values.put("diaChiKH", customer.getDiaChiKH());
+        if(sqLiteDatabase.update(TABLE_NAME,values,"idNV =?", new String[]{customer.getIdKH()})<0){
             return -1;
         }
         else {
@@ -59,17 +59,17 @@ public class KhachHangDAO {
     }
 
     //doc dữ liệu
-    public List<KhachHang> getAllKHString(){
-        List<KhachHang> list = new ArrayList<KhachHang>();
+    public List<Customer> getAllKHString(){
+        List<Customer> list = new ArrayList<Customer>();
         Cursor cursor=sqLiteDatabase.query(TABLE_NAME,null,null,null,null,null,null);
         cursor.moveToFirst();
         while (cursor.isAfterLast()==false){
-            KhachHang khachHang = new KhachHang();
-            khachHang.setIdKH(cursor.getString(0));
-            khachHang.setTenKH(cursor.getString(1));
-            khachHang.setSdtKH(cursor.getString(2));
-            khachHang.setDiaChiKH(cursor.getString(3));
-            list.add(khachHang);
+            Customer customer = new Customer();
+            customer.setIdKH(cursor.getString(0));
+            customer.setTenKH(cursor.getString(1));
+            customer.setSdtKH(cursor.getString(2));
+            customer.setDiaChiKH(cursor.getString(3));
+            list.add(customer);
             cursor.moveToNext();
         }
         cursor.close();

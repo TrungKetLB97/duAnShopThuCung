@@ -1,19 +1,19 @@
 package com.shopThuCung.duanshopthucung.Customer;
 
-public class KhachHang {
+public class Customer {
     private String idKH;
     private String tenKH;
     private String sdtKH;
     private String diaChiKH;
 
-    public KhachHang(String idKH, String tenKH, String sdtKH, String diaChiKH) {
+    public Customer(String idKH, String tenKH, String sdtKH, String diaChiKH) {
         this.idKH = idKH;
         this.tenKH = tenKH;
         this.sdtKH = sdtKH;
         this.diaChiKH = diaChiKH;
     }
 
-    public KhachHang() {
+    public Customer() {
     }
 
     public String getIdKH() {
