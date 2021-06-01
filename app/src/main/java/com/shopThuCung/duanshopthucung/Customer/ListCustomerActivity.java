@@ -19,7 +19,6 @@ public class ListCustomerActivity extends AppCompatActivity {
     CustomerDAO customerDAO;
     ListView lvKH;
     Customer customer;
-    int pos=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +26,7 @@ public class ListCustomerActivity extends AppCompatActivity {
 
         lvKH = findViewById(R.id.lvKH);
 
-        customerList = new ArrayList<Customer>();
+        customerList = new ArrayList<>();
         customerDAO = new CustomerDAO(this);
         customerList = customerDAO.getAllKHString();
         customer = new Customer();
@@ -37,7 +36,6 @@ public class ListCustomerActivity extends AppCompatActivity {
 
         lvKH.setOnItemClickListener((parent, view, position, id) -> {
             customer = (Customer) lvKH.getItemAtPosition(position);
-            pos = position;
             Intent i = new Intent(ListCustomerActivity.this, ChiTietCustomerActivity.class);
             i.putExtra("IdKH", customer.getIdKH());
             i.putExtra("TenKH", customer.getTenKH());

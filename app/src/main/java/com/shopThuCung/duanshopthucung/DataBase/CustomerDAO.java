@@ -44,7 +44,7 @@ public class CustomerDAO {
         values.put("tenKH", customer.getTenKH());
         values.put("sdtKH", customer.getSdtKH());
         values.put("diaChiKH", customer.getDiaChiKH());
-        if(sqLiteDatabase.update(TABLE_NAME,values,"idNV =?", new String[]{customer.getIdKH()})<0){
+        if(sqLiteDatabase.update(TABLE_NAME,values,"idKH =?", new String[]{customer.getIdKH()})<0){
             return -1;
         }
         else {
