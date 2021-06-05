@@ -1,4 +1,4 @@
-package com.shopThuCung.duanshopthucung.Customer;
+package com.shopThuCung.duanshopthucung.Customer.Customer_NV;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,12 +8,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.shopThuCung.duanshopthucung.Customer.ChiTietCustomerActivity;
+import com.shopThuCung.duanshopthucung.Customer.EditCustomerActivity;
 import com.shopThuCung.duanshopthucung.DataBase.CustomerDAO;
 import com.shopThuCung.duanshopthucung.MainActivity;
 import com.shopThuCung.duanshopthucung.R;
-import com.shopThuCung.duanshopthucung.nhanVien.ChiTietNhanVienActivity;
 
-public class ChiTietCustomerActivity extends AppCompatActivity {
+public class ChiTietCustomerActivity_NV extends AppCompatActivity {
 
     TextView tvIDKH, tvTenKH, tvSdtKH, tvDiaChiKH;
     String idKH, tenKH, sdtKH, diaChiKH;
@@ -22,7 +23,7 @@ public class ChiTietCustomerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chi_tiet_customer);
+        setContentView(R.layout.activity_chi_tiet_customer_nv);
 
         customerDAO = new CustomerDAO(this);
         init();
@@ -36,18 +37,17 @@ public class ChiTietCustomerActivity extends AppCompatActivity {
         tvTenKH.setText("Ten: "+tenKH);
         tvSdtKH.setText("SDT: "+sdtKH);
         tvDiaChiKH.setText("Dia Chi: "+diaChiKH);
-
     }
 
     void init(){
-        tvIDKH = findViewById(R.id.khachHang_detail_tvIDKH);
-        tvTenKH = findViewById(R.id.khachHang_detail_tvNameKH);
-        tvSdtKH = findViewById(R.id.khachHang_detail_tvSdtKH);
-        tvDiaChiKH = findViewById(R.id.khachHang_detail_tvDiaChiKH);
+        tvIDKH = findViewById(R.id.khachHang_detail_tvIDKH_NV);
+        tvTenKH = findViewById(R.id.khachHang_detail_tvNameKH_NV);
+        tvSdtKH = findViewById(R.id.khachHang_detail_tvSdtKH_NV);
+        tvDiaChiKH = findViewById(R.id.khachHang_detail_tvDiaChiKH_NV);
     }
 
     public void moveEditKH(View view) {
-        Intent intent = new Intent(ChiTietCustomerActivity.this,EditCustomerActivity.class);
+        Intent intent = new Intent(ChiTietCustomerActivity_NV.this, EditCustomerActivity.class);
         intent.putExtra("IdKH",idKH);
         intent.putExtra("TenKH",tenKH);
         intent.putExtra("SdtKH",sdtKH);

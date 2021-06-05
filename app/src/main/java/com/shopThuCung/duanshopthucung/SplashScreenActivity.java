@@ -30,13 +30,10 @@ public class SplashScreenActivity extends AppCompatActivity {
         image.setAnimation(topAnim);
         tvLogo.setAnimation(bottomAnim);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
+        new Handler().postDelayed(() -> {
+            Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
         }, SPLASH_TIME_OUT);
     }
 }

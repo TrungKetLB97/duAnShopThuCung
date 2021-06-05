@@ -1,8 +1,7 @@
-package com.shopThuCung.duanshopthucung.Customer;
+package com.shopThuCung.duanshopthucung.Customer.Customer_NV;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,15 +9,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.shopThuCung.duanshopthucung.Customer.Customer;
+import com.shopThuCung.duanshopthucung.Customer.EditCustomerActivity;
 import com.shopThuCung.duanshopthucung.DataBase.CustomerDAO;
 import com.shopThuCung.duanshopthucung.MainActivity;
 import com.shopThuCung.duanshopthucung.R;
 
-import java.lang.reflect.InvocationHandler;
-import java.util.ArrayList;
-import java.util.List;
-
-public class EditCustomerActivity extends AppCompatActivity {
+public class EditCustomerActivity_NV extends AppCompatActivity {
 
     TextView tvIDKH;
     EditText edtTenKh, edtSdtKH, edtDiaChiKH;
@@ -28,8 +25,7 @@ public class EditCustomerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_customer);
-
+        setContentView(R.layout.activity_edit_customer_nv);
         customerDAO = new CustomerDAO(this);
         init();
 
@@ -47,10 +43,10 @@ public class EditCustomerActivity extends AppCompatActivity {
     }
 
     void init(){
-        tvIDKH = findViewById(R.id.khachHang_editKhachHang_tvID);
-        edtTenKh = findViewById(R.id.khachHang_editKhachHang_edtNameKH);
-        edtSdtKH = findViewById(R.id.khachHang_editKhachHang_edtSdtKH);
-        edtDiaChiKH = findViewById(R.id.khachHang_editKhachHang_edtDiaChiKH);
+        tvIDKH = findViewById(R.id.khachHang_editKhachHang_tvID_NV);
+        edtTenKh = findViewById(R.id.khachHang_editKhachHang_edtNameKH_NV);
+        edtSdtKH = findViewById(R.id.khachHang_editKhachHang_edtSdtKH_NV);
+        edtDiaChiKH = findViewById(R.id.khachHang_editKhachHang_edtDiaChiKH_NV);
     }
 
     public void editKhachHang(View view) {
@@ -65,6 +61,5 @@ public class EditCustomerActivity extends AppCompatActivity {
             Toast.makeText(this, "Sua thanh cong", Toast.LENGTH_SHORT).show();
         }
     }
-
 
 }

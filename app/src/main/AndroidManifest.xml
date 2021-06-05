@@ -17,31 +17,37 @@
         android:roundIcon="@drawable/thucung"
         android:supportsRtl="true"
         android:theme="@style/Theme.DuAnShopThuCung">
-            <activity android:name=".Bill.AddBillActivity" />
-            <activity android:name=".Bill.ChiTietBillActivity" />
-            <activity android:name=".Bill.EditBillActivity" />
-            <activity android:name=".Bill.ListBillActivity" />
-            <activity android:name=".Revenue.RevenueActivity" />
-            <activity android:name=".Customer.AddCustomerActivity" />
-            <activity android:name=".Customer.ChiTietCustomerActivity" />
-            <activity android:name=".Customer.EditCustomerActivity" />
-            <activity android:name=".Customer.ListCustomerActivity" />
-            <activity android:name=".nhanVien.AddNhanVienActivity" />
-            <activity android:name=".nhanVien.EditNhanVienActivity" />
-            <activity android:name=".nhanVien.ChiTietNhanVienActivity" />
-            <activity android:name=".nhanVien.ListNhanVienActivity" />
-            <activity android:name=".Product.addProductActivity" />
-            <activity android:name=".Product.editProductActivity" />
-            <activity android:name=".Product.chiTietThuCung" />
-            <activity android:name=".Product.ListProductActivity" />
-            <activity android:name=".MainActivity" />
-            <activity android:name=".SplashScreenActivity">
-                <intent-filter>
-                    <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".MainActivity_NV" />
+        <activity android:name=".Customer.Customer_NV.ListCustomerActivity_NV" />
+        <activity android:name=".Customer.Customer_NV.EditCustomerActivity_NV" />
+        <activity android:name=".Customer.Customer_NV.ChiTietCustomerActivity_NV" />
+        <activity android:name=".Customer.Customer_NV.AddCustomerActivity_NV" />
+        <activity android:name=".Bill.AddBillActivity" />
+        <activity android:name=".Bill.ChiTietBillActivity" />
+        <activity android:name=".Bill.EditBillActivity" />
+        <activity android:name=".Bill.ListBillActivity" />
+        <activity android:name=".Revenue.RevenueActivity" />
+        <activity android:name=".Customer.AddCustomerActivity" />
+        <activity android:name=".Customer.ChiTietCustomerActivity" />
+        <activity android:name=".Customer.EditCustomerActivity" />
+        <activity android:name=".Customer.ListCustomerActivity" />
+        <activity android:name=".nhanVien.AddNhanVienActivity" />
+        <activity android:name=".nhanVien.EditNhanVienActivity" />
+        <activity android:name=".nhanVien.ChiTietNhanVienActivity" />
+        <activity android:name=".nhanVien.ListNhanVienActivity" />
+        <activity android:name=".Product.addProductActivity" />
+        <activity android:name=".Product.editProductActivity" />
+        <activity android:name=".Product.chiTietThuCung" />
+        <activity android:name=".Product.ListProductActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                    <category android:name="android.intent.category.LAUNCHER" />
-                </intent-filter>
-            </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

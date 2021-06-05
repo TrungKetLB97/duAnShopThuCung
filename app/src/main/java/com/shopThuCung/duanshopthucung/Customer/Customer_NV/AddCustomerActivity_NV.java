@@ -1,4 +1,4 @@
-package com.shopThuCung.duanshopthucung.Customer;
+package com.shopThuCung.duanshopthucung.Customer.Customer_NV;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.shopThuCung.duanshopthucung.Customer.AddCustomerActivity;
+import com.shopThuCung.duanshopthucung.Customer.Customer;
 import com.shopThuCung.duanshopthucung.DataBase.CustomerDAO;
 import com.shopThuCung.duanshopthucung.MainActivity;
 import com.shopThuCung.duanshopthucung.R;
@@ -15,25 +17,28 @@ import com.shopThuCung.duanshopthucung.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddCustomerActivity extends AppCompatActivity {
+public class AddCustomerActivity_NV extends AppCompatActivity {
+
     EditText edtId, edtName, edtSdt, edtDiaChi;
     List<Customer> customerList;
     CustomerDAO customerDAO;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_customer);
+        setContentView(R.layout.activity_add_customer_nv);
+
         init();
         customerList = new ArrayList<>();
-        customerDAO = new CustomerDAO(AddCustomerActivity.this);
+        customerDAO = new CustomerDAO(AddCustomerActivity_NV.this);
         customerList = customerDAO.getAllKHString();
+
     }
 
     public void init(){
-        edtId = findViewById(R.id.khachHang_addKhachHang_edtIDKH);
-        edtName = findViewById(R.id.khachHang_addKhachHang_edtNameKH);
-        edtSdt = findViewById(R.id.khachHang_addKhachHang_edtSdt);
-        edtDiaChi = findViewById(R.id.khachHang_addKhachHang_edtDiaChi);
+        edtId = findViewById(R.id.khachHang_addKhachHang_edtIDKH_NV);
+        edtName = findViewById(R.id.khachHang_addKhachHang_edtNameKH_NV);
+        edtSdt = findViewById(R.id.khachHang_addKhachHang_edtSdt_NV);
+        edtDiaChi = findViewById(R.id.khachHang_addKhachHang_edtDiaChi_NV);
     }
 
     public void addKhachHang(View view) {
