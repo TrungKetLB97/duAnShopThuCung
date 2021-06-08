@@ -13,6 +13,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL(PasswordDAO_Admin.SQL_TABLE_Password_Admin);
+        db.execSQL(PasswordDAO_NV.SQL_TABLE_Password_NV);
         //db.execSQL(ProductDAO.SQL_PRODUCT);
         //db.execSQL(BillDAO.SQL_Bill);
         db.execSQL(CustomerDAO.SQL_TABLE_KhachHang);
@@ -24,5 +26,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + ProductDAO.PRODUCT_TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + CustomerDAO.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + NhanVienDAO.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + PasswordDAO_Admin.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + PasswordDAO_NV.TABLE_NAME);
     }
 }

@@ -37,7 +37,6 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/nhanVien_detail_imgNhanVien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -88,7 +87,6 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" >
 
         <Button
-            android:id="@+id/khachHang_detail_btnEditKhachHang_NV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -97,7 +95,6 @@
             android:onClick="moveEditKH"
             android:text="Edit" />
         <Button
-            android:id="@+id/khachHang_detail_btnDeleteKhachHang_NV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

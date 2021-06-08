@@ -33,7 +33,6 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar_add_khachHang">
 
         <ImageView
-            android:id="@+id/nhanVien_addNV_imgPicture"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/khachhang"
@@ -121,7 +120,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/khachHang_addKH_btnThem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"

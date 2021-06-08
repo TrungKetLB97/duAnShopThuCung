@@ -35,21 +35,18 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/thuCung_detail_imgProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:src="@drawable/no_image" />
 
             <TextView
-                android:id="@+id/thuCung_detail_tvIDProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:text="ID"
                 android:textSize="20dp" />
             <TextView
-                android:id="@+id/thuCung_detail_tvNameProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -57,7 +54,6 @@
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/thuCung_detail_tvTuoiProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -65,7 +61,6 @@
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/thuCung_detail_tvCanNangProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -73,7 +68,6 @@
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/thuCung_detail_tvGioiTinhProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -81,7 +75,6 @@
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/thuCung_detail_tvTinhTrangSkProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -102,7 +95,6 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" >
 
         <Button
-            android:id="@+id/thuCung_detail_btnEditProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -110,7 +102,6 @@
             android:layout_marginBottom="10dp"
             android:text="Edit" />
         <Button
-            android:id="@+id/thuCung_detail_btnDeleteProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

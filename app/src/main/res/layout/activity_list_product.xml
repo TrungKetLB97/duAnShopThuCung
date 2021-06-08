@@ -21,7 +21,6 @@
 
 
         <ImageButton
-            android:id="@+id/thuCung_searchThuCung"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
@@ -48,7 +47,6 @@
             android:src="@drawable/thucungbg" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/thuCung_rvThuCung"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -59,7 +57,6 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/thuCung_addThucCung"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginLeft="750dp"

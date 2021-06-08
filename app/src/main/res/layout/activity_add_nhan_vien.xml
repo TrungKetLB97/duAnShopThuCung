@@ -33,7 +33,6 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar_edit_nhanVien">
 
         <ImageView
-            android:id="@+id/nhanVien_editNhanVien_imgPicture"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/nhanvien"
@@ -141,7 +140,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -161,7 +159,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/nhanVien_addNV_btnThem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"

@@ -10,16 +10,20 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.shopThuCung.duanshopthucung.Login.SignInOrLoginActivity;
+
 public class SplashScreenActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 2000;
     private Animation topAnim, bottomAnim;
     private ImageView image;
     private TextView tvLogo;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+
         // animation
         topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);
         bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
@@ -31,7 +35,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         tvLogo.setAnimation(bottomAnim);
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
+            Intent intent = new Intent(SplashScreenActivity.this, SignInOrLoginActivity.class);
             startActivity(intent);
             finish();
         }, SPLASH_TIME_OUT);
