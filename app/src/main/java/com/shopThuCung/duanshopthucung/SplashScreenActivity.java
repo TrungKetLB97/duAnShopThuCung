@@ -10,7 +10,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.shopThuCung.duanshopthucung.Login.SignInOrLoginActivity;
+import com.shopThuCung.duanshopthucung.Login.LoginActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 2000;
@@ -35,7 +35,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         tvLogo.setAnimation(bottomAnim);
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashScreenActivity.this, SignInOrLoginActivity.class);
+            Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
             startActivity(intent);
             finish();
         }, SPLASH_TIME_OUT);

@@ -20,7 +20,10 @@ public class LoginActivity extends AppCompatActivity {
     EditText edtId,edtPass;
     PasswordDAO_Admin passwordDAO_admin;
     PasswordDAO_NV passwordDAO_nv;
-    Button btnLoginNV;
+    String idLog, passLog;
+
+
+    boolean varAd, varNv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,39 +31,46 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         edtId = findViewById(R.id.edt_IdAdmin);
         edtPass = findViewById(R.id.edt_Pass_Admin);
-        btnLoginNV = findViewById(R.id.btnLoginNV);
         passwordDAO_admin = new PasswordDAO_Admin(LoginActivity.this);
         passwordDAO_nv = new PasswordDAO_NV(LoginActivity.this);
-
-
-        //btnLoginNV.setOnClickListener(v ->
-          //      validateLoginNV(edtId.getText().toString(),edtPass.getText().toString()));
     }
 
-    public void validateLoginAdmin(String idAd, String passAd){
-        boolean varAd = passwordDAO_admin.checkUser(idAd,passAd);
-        boolean varNv = passwordDAO_nv.checkUser(idAd,passAd);
-        if(varAd){
-            Intent i = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(i);
-            finish();
+    public int validateLogin(){
+        idLog = edtId.getText().toString();
+        passLog = edtPass.getText().toString();
+        varNv = passwordDAO_nv.checkUser(idLog,passLog);
+        varAd = passwordDAO_admin.checkUser(idLog,passLog);
+        int a = 0;
+        if(varAd) {
+            a = 1;
         }
-        else if(varNv){
-            Intent i = new Intent(LoginActivity.this, MainActivity_NV.class);
-            startActivity(i);
+        if(varNv){
+            a = 2;
         }
-        else{
-            Toast.makeText(this, "id or password is incorrect, try again", Toast.LENGTH_SHORT).show();
+        return a;
+    }
+
+    public void Login(View view) {
+        int login = validateLogin();
+        switch (login){
+            case 1:
+                Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(i);
+                break;
+            case 2:
+                Intent intent = new Intent(LoginActivity.this, MainActivity_NV.class);
+                startActivity(intent);
+                break;
+            default:
+                Toast.makeText(this, "id or password is incorrect, try again", Toast.LENGTH_SHORT).show();
         }
     }
 
-//    public void validateLoginNV(String idAd, String passAd){
-//        else{
-//            Toast.makeText(this, "id or password is incorrect, try again", Toast.LENGTH_SHORT).show();
-//        }
-//    }
+    public void moveCreateAccNV(View view) {
+        startActivity(new Intent(this, CreateAccNVActivity.class));
+    }
 
-    public void LoginAdmin(View view) {
-        validateLoginAdmin(edtId.getText().toString(),edtPass.getText().toString());
+    public void moveCreateAccAdmin(View view) {
+        startActivity(new Intent(this, CreateAccAdminActivity.class));
     }
 }
