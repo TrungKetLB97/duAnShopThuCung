@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="320dp"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/camera"
+        android:text="Chụp ảnh"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/database"
+        android:text="Bộ nhớ máy"
+        android:textSize="16sp" />
+
+</LinearLayout>

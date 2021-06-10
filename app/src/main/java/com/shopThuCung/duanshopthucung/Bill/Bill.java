@@ -1,45 +1,29 @@
 package com.shopThuCung.duanshopthucung.Bill;
 
 public class Bill {
-    String id;
-    String tenSP;
-    String thanhTien;
+    String maHoaDon;
     String tenKhachHang;
+    String tenSanPham;
+    double tongTien;
     String date;
 
     public Bill() {
     }
 
-    public Bill(String id, String tenSP, String thanhTien, String tenKhachHang) {
-        this.id = id;
-        this.tenSP = tenSP;
-        this.thanhTien = thanhTien;
+    public Bill(String maHoaDon, String tenKhachHang, String tenSanPham, double tongTien, String date) {
+        this.maHoaDon = maHoaDon;
         this.tenKhachHang = tenKhachHang;
+        this.tenSanPham = tenSanPham;
+        this.tongTien = tongTien;
         this.date = date;
     }
 
-    public String getId() {
-        return id;
+    public String getMaHoaDon() {
+        return maHoaDon;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getTenSP() {
-        return tenSP;
-    }
-
-    public void setTenSP(String tenSP) {
-        this.tenSP = tenSP;
-    }
-
-    public String getThanhTien() {
-        return thanhTien;
-    }
-
-    public void setThanhTien(String thanhTien) {
-        this.thanhTien = thanhTien;
+    public void setMaHoaDon(String maHoaDon) {
+        this.maHoaDon = maHoaDon;
     }
 
     public String getTenKhachHang() {
@@ -48,6 +32,22 @@ public class Bill {
 
     public void setTenKhachHang(String tenKhachHang) {
         this.tenKhachHang = tenKhachHang;
+    }
+
+    public String getTenSanPham() {
+        return tenSanPham;
+    }
+
+    public void setTenSanPham(String tenSanPham) {
+        this.tenSanPham = tenSanPham;
+    }
+
+    public double getTongTien() {
+        return tongTien;
+    }
+
+    public void setTongTien(double tongTien) {
+        this.tongTien = tongTien;
     }
 
     public String getDate() {

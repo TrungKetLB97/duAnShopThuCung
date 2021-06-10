@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+//import com.shopThuCung.duanshopthucung.Bill.ListBillActivity;
 import com.shopThuCung.duanshopthucung.Bill.ListBillActivity;
 import com.shopThuCung.duanshopthucung.Customer.ListCustomerActivity;
 import com.shopThuCung.duanshopthucung.Product.ListProductActivity;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void customer(View view) {
+    public void khachHang(View view) {
         Intent intent = new Intent(MainActivity.this, ListCustomerActivity.class);
         startActivity(intent);
     }

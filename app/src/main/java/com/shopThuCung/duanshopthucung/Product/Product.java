@@ -1,25 +1,28 @@
 package com.shopThuCung.duanshopthucung.Product;
 
 public class Product {
+
     byte[] productImage;
-    String productId;
-    String productTen;
-    String productLoai;
-    String productTuoi;
-    String productTinhTrangSK;
-    String productGiaTien;
+    String code;
+    String name;
+    int age;
+    double weight;
+    String gender;
+    String health;
+    double price;
 
     public Product() {
     }
 
-    public Product(byte[] productImage, String productId, String productTen, String productLoai, String productTuoi, String productTinhTrangSK, String productGiaTien) {
+    public Product(byte[] productImage, String code, String name, int age, double weight, String gender, String health, double price) {
         this.productImage = productImage;
-        this.productId = productId;
-        this.productTen = productTen;
-        this.productLoai = productLoai;
-        this.productTuoi = productTuoi;
-        this.productTinhTrangSK = productTinhTrangSK;
-        this.productGiaTien = productGiaTien;
+        this.code = code;
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.gender = gender;
+        this.health = health;
+        this.price = price;
     }
 
     public byte[] getProductImage() {
@@ -30,52 +33,61 @@ public class Product {
         this.productImage = productImage;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getCode() {
+        return code;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public String getProductTen() {
-        return productTen;
+    public String getName() {
+        return name;
     }
 
-    public void setProductTen(String productTen) {
-        this.productTen = productTen;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getProductLoai() {
-        return productLoai;
+    public int getAge() {
+        return age;
     }
 
-    public void setProductLoai(String productLoai) {
-        this.productLoai = productLoai;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public String getProductTuoi() {
-        return productTuoi;
+    public double getWeight() {
+        return weight;
     }
 
-    public void setProductTuoi(String productTuoi) {
-        this.productTuoi = productTuoi;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
-    public String getProductTinhTrangSK() {
-        return productTinhTrangSK;
+    public String getGender() {
+        return gender;
     }
 
-    public void setProductTinhTrangSK(String productTinhTrangSK) {
-        this.productTinhTrangSK = productTinhTrangSK;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public String getProductGiaTien() {
-        return productGiaTien;
+    public String getHealth() {
+        return health;
     }
 
-    public void setProductGiaTien(String productGiaTien) {
-        this.productGiaTien = productGiaTien;
+    public void setHealth(String health) {
+        this.health = health;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
+
 

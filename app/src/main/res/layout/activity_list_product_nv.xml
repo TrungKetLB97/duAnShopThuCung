@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_200"
-    tools:context=".Product.ListProductActivity">
+    tools:context=".Product_NV.ListProductActivity_NV">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -43,9 +43,9 @@
             android:src="@drawable/thucungbg"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/thuCung_rvThuCung"
+            android:id="@+id/thuCung_rvThuCung_nv"
             android:layout_width="match_parent"
-            android:layout_height="673dp"
+            android:layout_height="match_parent"
             android:layout_margin="8dp"
             android:padding="6dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />

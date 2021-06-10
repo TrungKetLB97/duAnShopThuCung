@@ -23,7 +23,7 @@
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
-            card_view:srcCompat="@drawable/addimage" />
+            card_view:srcCompat="@drawable/pet" />
 
         <TextView
             android:id="@+id/tvName"
@@ -40,7 +40,7 @@
             card_view:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/imageButtonArrow"
+            android:id="@+id/imageButtonArrow1"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="16dp"
@@ -54,37 +54,36 @@
             tools:ignore="VectorDrawableCompat" />
 
         <TextView
-            android:id="@+id/tvWeight"
+            android:id="@+id/tvGia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="4dp"
-            android:text="Weight"
+            android:text="Gia tien"
             card_view:layout_constraintStart_toEndOf="@+id/imgProduct"
             card_view:layout_constraintTop_toBottomOf="@+id/tvName" />
 
-
         <TextView
-            android:id="@+id/tvProduct"
+            android:id="@+id/tvGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="4dp"
-            android:text="Gender"
+            android:text="Loai"
             card_view:layout_constraintStart_toEndOf="@+id/imgProduct"
-            card_view:layout_constraintTop_toBottomOf="@+id/tvWeight" />
+            card_view:layout_constraintTop_toBottomOf="@+id/tvGia" />
 
         <TextView
-            android:id="@+id/tvPrice"
+            android:id="@+id/tvCannang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="4dp"
-            android:text="Age"
+            android:text="Can nang"
             card_view:layout_constraintStart_toEndOf="@+id/imgProduct"
-            card_view:layout_constraintTop_toBottomOf="@+id/tvProduct" />
+            card_view:layout_constraintTop_toBottomOf="@+id/tvGender" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
