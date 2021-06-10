@@ -17,6 +17,14 @@
         android:roundIcon="@drawable/thucung"
         android:supportsRtl="true"
         android:theme="@style/Theme.DuAnShopThuCung">
+            <activity android:name=".Login.CreateAccNVActivity" />
+            <activity android:name=".Login.CreateAccAdminActivity" />
+            <activity android:name=".Login.LoginActivity" />
+            <activity android:name=".MainActivity_NV" />
+            <activity android:name=".Customer.Customer_NV.ListCustomerActivity_NV" />
+            <activity android:name=".Customer.Customer_NV.EditCustomerActivity_NV" />
+            <activity android:name=".Customer.Customer_NV.ChiTietCustomerActivity_NV" />
+            <activity android:name=".Customer.Customer_NV.AddCustomerActivity_NV" />
             <activity android:name=".Bill.AddBillActivity" />
             <activity android:name=".Bill.ChiTietBillActivity" />
             <activity android:name=".Bill.EditBillActivity" />

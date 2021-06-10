@@ -17,6 +17,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(BillDAO.SQL_BILL);
         db.execSQL(CustomerDAO.SQL_TABLE_KhachHang);
         db.execSQL(NhanVienDAO.SQL_TABLE_NhanVien);
+        db.execSQL(PasswordDAO_Admin.SQL_TABLE_Password_Admin);
+        db.execSQL(PasswordDAO_NV.SQL_TABLE_Password_NV);
     }
 
     @Override
@@ -24,5 +26,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + ProductDAO.PRODUCT_TABLE);
         db.execSQL("DROP TABLE IF EXISTS " + CustomerDAO.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + NhanVienDAO.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + PasswordDAO_Admin.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + PasswordDAO_NV.TABLE_NAME);
     }
 }
