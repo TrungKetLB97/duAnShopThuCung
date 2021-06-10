@@ -64,6 +64,7 @@ public class EditCustomerActivity extends AppCompatActivity {
         } else{
             Toast.makeText(this, "Sua thanh cong", Toast.LENGTH_SHORT).show();
         }
+        startActivity(new Intent(EditCustomerActivity.this, MainActivity.class));
     }
 
 

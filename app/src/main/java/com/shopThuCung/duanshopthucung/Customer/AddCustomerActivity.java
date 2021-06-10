@@ -47,5 +47,6 @@ public class AddCustomerActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Them Thanh Cong", Toast.LENGTH_SHORT).show();
         }
+        startActivity(new Intent(AddCustomerActivity.this, MainActivity.class));
     }
 }

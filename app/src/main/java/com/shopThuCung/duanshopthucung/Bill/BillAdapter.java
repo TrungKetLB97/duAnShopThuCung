@@ -85,7 +85,7 @@ public class BillAdapter extends RecyclerView.Adapter<BillAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull BillAdapter.ViewHolder holder, int position) {
         holder.tvBillId.setText("Mã hóa đơn : " + billList.get(position).getMaHoaDon());
         holder.tvCustomerName.setText("Khách hàng : " + billList.get(position).getTenKhachHang());
-//        holder.tvProductName.setText("Sản phẩm :  " + billList.get(position).getTenSanPham() );
+        holder.tvProductName.setText("Sản phẩm :  " + billList.get(position).getTenSanPham() );
         holder.tvTotalMoney.setText("Tổng tiền : " + billList.get(position).getTongTien() + " VND");
         holder.tvNgay.setText("Ngày mua : " +billList.get(position).getDate());
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {

@@ -52,5 +52,6 @@ public class AddNhanVienActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Them Thanh Cong", Toast.LENGTH_SHORT).show();
         }
+        startActivity(new Intent(AddNhanVienActivity.this, MainActivity.class));
     }
 }

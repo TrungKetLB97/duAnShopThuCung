@@ -70,5 +70,7 @@ public class ChiTietNhanVienActivity extends AppCompatActivity {
             Toast.makeText(this, "Xoa thanh cong", Toast.LENGTH_SHORT).show();
         }
 
+        startActivity(new Intent(ChiTietNhanVienActivity.this, MainActivity.class));
+
     }
 }
