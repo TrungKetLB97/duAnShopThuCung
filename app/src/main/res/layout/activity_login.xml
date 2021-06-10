@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Login.LoginActivity">
+
+    <EditText
+        android:hint="ID"
+        android:id="@+id/edt_IdAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:id="@+id/edt_Pass_Admin"
+        android:hint="Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:text="Login"
+        android:onClick="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_margin="8dp"
+        android:text="Create Account Admin"
+        android:onClick="moveCreateAccAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_margin="8dp"
+        android:text="Create Account NV"
+        android:onClick="moveCreateAccNV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

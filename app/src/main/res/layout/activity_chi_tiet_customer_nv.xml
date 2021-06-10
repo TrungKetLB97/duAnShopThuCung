@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Product.">
+    tools:context=".Customer.Customer_NV.ChiTietCustomerActivity_NV">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_post_detail"
+        android:id="@+id/toolbar_detail_khachHang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple_700"
@@ -16,8 +16,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="CHI TIẾT THÚ CƯNG"
-        app:titleMarginStart="115dp"/>
+        app:title="CHI TIẾT KHÁCH HÀNG"
+        app:titleMarginStart="100dp"/>
+
+
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -27,7 +29,7 @@
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_post_detail">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_detail_khachHang">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,56 +40,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:src="@drawable/no_image" />
+                android:src="@drawable/khachhang" />
 
             <TextView
+                android:id="@+id/khachHang_detail_tvIDKH_NV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:text="ID"
                 android:textSize="20dp" />
             <TextView
+                android:id="@+id/khachHang_detail_tvNameKH_NV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Tên"
+                android:text="Tên Khách Hàng"
                 android:textSize="20dp" />
 
             <TextView
+                android:id="@+id/khachHang_detail_tvSdtKH_NV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Tuổi"
+                android:text="SDT"
                 android:textSize="20dp" />
 
             <TextView
+                android:id="@+id/khachHang_detail_tvDiaChiKH_NV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Cân Nặng"
+                android:text="Địa chỉ "
                 android:textSize="20dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="Giới Tính"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="Tình Trạng SK"
-                android:textSize="20dp" />
         </LinearLayout>
 
     </ScrollView>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp"
+        android:layout_margin="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -100,6 +92,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginLeft="80dp"
             android:layout_marginBottom="10dp"
+            android:onClick="moveEditKH"
             android:text="Edit" />
         <Button
             android:layout_width="wrap_content"
@@ -107,7 +100,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginLeft="50dp"
             android:layout_marginBottom="10dp"
+            android:onClick="DeleteKH"
             android:text="Delete" />
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

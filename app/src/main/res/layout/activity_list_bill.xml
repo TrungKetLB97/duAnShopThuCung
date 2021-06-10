@@ -9,7 +9,6 @@
     tools:context=".Bill.ListBillActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarDanhSachHoaDon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#ffca60"
@@ -18,7 +17,6 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/searchBill"
         android:layout_margin="8dp"
         android:hint="Tìm kiếm hóa đơn theo mã"/>
     <androidx.recyclerview.widget.RecyclerView
@@ -27,11 +25,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
-        android:padding="10dp"
-        android:id="@+id/rvBill"/>
+        android:padding="10dp" />
 
     <ImageButton
-        android:id="@+id/Bill_themBill"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="300dp"
