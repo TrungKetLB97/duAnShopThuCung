@@ -7,30 +7,51 @@
     android:orientation="vertical"
     tools:context=".Login.CreateAccNVActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_add_khachHang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="ĐĂNG KÝ NHÂN VIÊN"
+        app:titleMarginStart="120dp"/>
+
     <EditText
-        android:layout_margin="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/add_Account_NV_Id"
         android:hint="ID NV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="50dp"
         android:inputType="textPassword"
-        android:layout_margin="8dp"
         android:id="@+id/add_Account_NV_Password"
         android:hint="Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="50dp"
         android:inputType="textPassword"
-        android:layout_margin="8dp"
         android:id="@+id/add_Account_NV_RePassword"
         android:hint="RePassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
         android:onClick="AddAccNV"
         android:text="Create Account NV"
         android:layout_width="wrap_content"

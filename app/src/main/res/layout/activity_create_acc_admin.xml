@@ -3,11 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".Login.CreateAccAdminActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_add_khachHang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="ĐĂNG KÝ ADMIN"
+        app:titleMarginStart="140dp"/>
+
     <EditText
-        android:layout_margin="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/add_Account_Admin_Id"
         android:hint="ID Admin"
         android:layout_width="match_parent"
@@ -16,22 +32,28 @@
         tools:ignore="Autofill" />
 
     <EditText
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="50dp"
         android:inputType="textPassword"
-        android:layout_margin="8dp"
         android:id="@+id/add_Account_Admin_Password"
         android:hint="Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="50dp"
         android:inputType="textPassword"
-        android:layout_margin="8dp"
         android:id="@+id/add_Account_Admin_RePassword"
         android:hint="RePassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
         android:onClick="AddAccAdmin"
         android:text="Create Account Admin"
         android:layout_width="wrap_content"

@@ -3,10 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".Login.LoginActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_add_khachHang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="ĐĂNG NHẬP"
+        app:titleMarginStart="140dp"/>
+
+    <ImageView
+        android:layout_margin="8dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/thucung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <EditText
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
         android:hint="ID"
         android:id="@+id/edt_IdAdmin"
         android:layout_width="match_parent"
@@ -15,6 +39,8 @@
         android:importantForAutofill="no" />
 
     <EditText
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:inputType="textPassword"
         android:id="@+id/edt_Pass_Admin"
         android:hint="Password"
@@ -23,22 +49,26 @@
         android:importantForAutofill="no" />
 
     <Button
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"
         android:text="Login"
         android:onClick="Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:layout_margin="8dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
         android:text="Create Account Admin"
         android:onClick="moveCreateAccAdmin"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"/>
     <Button
-        android:layout_margin="8dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
         android:text="Create Account NV"
         android:onClick="moveCreateAccNV"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"/>
 
 </LinearLayout>
