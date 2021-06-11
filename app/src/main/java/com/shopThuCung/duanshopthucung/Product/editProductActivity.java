@@ -63,14 +63,14 @@ public class editProductActivity extends AppCompatActivity {
         edtGia = findViewById(R.id.editProduct_edtGia);
 
         Bundle bundle = getIntent().getExtras();
-        productCode = bundle.getString("CodePet");
+        productCode = bundle.getString("IDPet");
         productImage = bundle.getByteArray("productImage");
-        productName = bundle.getString("NamePet");
-        productAge = bundle.getInt("AgePet");
-        productWeight = bundle.getDouble("WeightPet");
-        productGender = bundle.getString("GenderPet");
-        productHealth = bundle.getString("HealthPet");
-        productPrice = bundle.getDouble("Price");
+        productName = bundle.getString("namePet");
+        productAge = bundle.getInt("agePet");
+        productWeight = bundle.getDouble("weightPet");
+        productGender = bundle.getString("genderPet");
+        productHealth = bundle.getString("healthPet");
+        productPrice = bundle.getDouble("price");
 
 
         imgProduct.setImageBitmap(getImage(productImage));

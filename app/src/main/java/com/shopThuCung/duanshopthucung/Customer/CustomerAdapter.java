@@ -6,14 +6,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Filter;
 
 import com.shopThuCung.duanshopthucung.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerAdapter extends BaseAdapter {
     private List<Customer> customerList;
-    private Context context;
+    private List<Customer> customerListSort;
+    private final Context context;
+    CustomFilter customFilter;
 
     public CustomerAdapter(List<Customer> customerList, Context context) {
         this.customerList = customerList;
@@ -24,6 +28,46 @@ public class CustomerAdapter extends BaseAdapter {
     public int getCount() {
         return customerList.size();
     }
+
+    public Filter getFilter() {
+        if (customFilter == null){
+            customFilter = new CustomFilter();
+        }
+        return customFilter;
+    }
+    private class CustomFilter extends Filter {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            FilterResults results = new FilterResults();
+            if(constraint!=null || constraint.length()>0){
+                constraint = constraint.toString().toUpperCase();
+                ArrayList<Customer> filter = new ArrayList<>();
+                for (int i=0; i<customerListSort.size();i++){
+                    if(customerListSort.get(i).getTenKH().toUpperCase().contains(constraint)){
+                        Customer customer1 = new Customer(customerListSort.get(i).getIdKH(),
+                                customerListSort.get(i).getTenKH(),
+                                customerListSort.get(i).getSdtKH(),
+                                customerListSort.get(i).getDiaChiKH());
+                        filter.add(customer1);
+                    }
+                }
+                results.count = filter.size();
+                results.values=filter;
+            }else {
+                results.count = customerListSort.size();
+                results.values=customerListSort;
+            }
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            customerList = (ArrayList<Customer>) results.values;
+            notifyDataSetChanged();
+        }
+    }
+
+
 
     @Override
     public Object getItem(int position) {
@@ -41,7 +85,7 @@ public class CustomerAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder viewHolder = null;
+        ViewHolder viewHolder;
         Customer customer = (Customer) getItem(position);
         if(convertView == null){
             convertView = LayoutInflater.from(context).inflate(R.layout.item_list_customer_layout,null,false);

@@ -5,20 +5,70 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
 import android.widget.TextView;
 
+import com.shopThuCung.duanshopthucung.Customer.Customer;
 import com.shopThuCung.duanshopthucung.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NhanVienAdapter extends BaseAdapter {
     private List<NhanVien> nhanVienList;
+    private List<NhanVien> nhanVienListSort;
     private Context context;
+    CustomFilter customFilter;
 
     public NhanVienAdapter(List<NhanVien> nhanVienList, Context context) {
         this.nhanVienList = nhanVienList;
         this.context = context;
     }
+
+
+    public Filter getFilter() {
+        if (customFilter == null){
+            customFilter = new CustomFilter();
+        }
+        return customFilter;
+    }
+    private class CustomFilter extends Filter {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            FilterResults results = new FilterResults();
+            if(constraint!=null || constraint.length()>0){
+                constraint = constraint.toString().toUpperCase();
+                ArrayList<NhanVien> filter = new ArrayList<>();
+                for (int i=0; i<nhanVienListSort.size();i++){
+                    if(nhanVienListSort.get(i).getTenNV().toUpperCase().contains(constraint)){
+                        NhanVien nhanVien1 = new NhanVien(
+                                nhanVienListSort.get(i).getIdNV(),
+                                nhanVienListSort.get(i).getTenNV(),
+                                nhanVienListSort.get(i).getChucVuNV(),
+                                nhanVienListSort.get(i).getSdtNV(),
+                                nhanVienListSort.get(i).getDiaChiNV(),
+                                nhanVienListSort.get(i).getNgaySinhNV());
+                        filter.add(nhanVien1);
+                    }
+                }
+                results.count = filter.size();
+                results.values=filter;
+            }else {
+                results.count = nhanVienListSort.size();
+                results.values=nhanVienListSort;
+            }
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            nhanVienList = (ArrayList<NhanVien>) results.values;
+            notifyDataSetChanged();
+        }
+    }
+
+
+
 
     @Override
     public int getCount() {

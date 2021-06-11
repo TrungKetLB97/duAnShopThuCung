@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -113,6 +114,7 @@ public interface ItemClickListener{
 
     @Override
     public void onBindViewHolder(@NonNull ProductAdapter.ViewHolder holder, int position) {
+  Log.e("ccc", ""+position);
         holder.imgProduct.setImageBitmap(
                 getImage(productList.get(position).getProductImage()));
         holder.tvName.setText("Tên : " + productList.get(position).getName());
@@ -124,14 +126,14 @@ public interface ItemClickListener{
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), AddBillActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("CodePet", productList.get(position).getCode());
+                bundle.putString("IDPet", productList.get(position).getCode());
                 bundle.putByteArray("productImage", productList.get(position).getProductImage());
-                bundle.putString("NamePet", productList.get(position).getName());
-                bundle.putInt("AgePet", productList.get(position).getAge());
-                bundle.putDouble("WeightPet", productList.get(position).getWeight());
-                bundle.putString("GenderPet", productList.get(position).getGender());
-                bundle.putString("HealthPet", productList.get(position).getHealth());
-                bundle.putDouble("Price", productList.get(position).getPrice());
+                bundle.putString("namePet", productList.get(position).getName());
+                bundle.putInt("agePet", productList.get(position).getAge());
+                bundle.putDouble("weightPet", productList.get(position).getWeight());
+                bundle.putString("genderPet", productList.get(position).getGender());
+                bundle.putString("healthPet", productList.get(position).getHealth());
+                bundle.putDouble("price", productList.get(position).getPrice());
                 intent.putExtras(bundle);
                 v.getContext().startActivity(intent);
             }
@@ -142,14 +144,14 @@ public interface ItemClickListener{
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), editProductActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("CodePet", productList.get(position).getCode());
+                bundle.putString("IDPet", productList.get(position).getCode());
                 bundle.putByteArray("productImage", productList.get(position).getProductImage());
-                bundle.putString("NamePet", productList.get(position).getName());
-                bundle.putInt("AgePet", productList.get(position).getAge());
-                bundle.putDouble("WeightPet", productList.get(position).getWeight());
-                bundle.putString("GenderPet", productList.get(position).getGender());
-                bundle.putString("HealthPet", productList.get(position).getHealth());
-                bundle.putDouble("Price", productList.get(position).getPrice());
+                bundle.putString("namePet", productList.get(position).getName());
+                bundle.putInt("agePet", productList.get(position).getAge());
+                bundle.putDouble("weightPet", productList.get(position).getWeight());
+                bundle.putString("genderPet", productList.get(position).getGender());
+                bundle.putString("healthPet", productList.get(position).getHealth());
+                bundle.putDouble("price", productList.get(position).getPrice());
                 intent.putExtras(bundle);
                 v.getContext().startActivity(intent);
             }

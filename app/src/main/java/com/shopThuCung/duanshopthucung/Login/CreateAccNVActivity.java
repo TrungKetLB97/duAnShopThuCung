@@ -2,6 +2,7 @@ package com.shopThuCung.duanshopthucung.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -36,6 +37,8 @@ public class CreateAccNVActivity extends AppCompatActivity {
             nv.setPasswordNV(edtPass.getText().toString());
             passwordDAO_nv.createPassNV(nv);
             Toast.makeText(this, "Added success", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(CreateAccNVActivity.this, LoginActivity.class);
+            startActivity(intent);
         }
         else{
             Toast.makeText(this, "Added fail", Toast.LENGTH_SHORT).show();

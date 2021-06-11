@@ -2,6 +2,7 @@ package com.shopThuCung.duanshopthucung.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -37,6 +38,8 @@ public class CreateAccAdminActivity extends AppCompatActivity {
             admin.setPasswordAdmin(edtPass.getText().toString());
             passwordDAO_admin.createPassAdmin(admin);
             Toast.makeText(this, "Added success", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(CreateAccAdminActivity.this, LoginActivity.class);
+            startActivity(intent);
         }
         else{
             Toast.makeText(this, "Added fail", Toast.LENGTH_SHORT).show();

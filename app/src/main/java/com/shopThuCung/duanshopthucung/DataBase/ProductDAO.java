@@ -18,14 +18,14 @@ public class ProductDAO {
     private final SQLiteOpenHelper helper;
     public static final String PRODUCT_TABLE= "Product";
     public static final String SQL_PRODUCT = " CREATE TABLE Product(" +
-           "CodePet TEXT PRIMARY KEY , " +
+           "IDPet TEXT PRIMARY KEY , " +
             "productImage BLOB , " +
-            "NamePet TEXT , " +
-            "AgePet TEXT , " +
-            "WeightPet TEXT , " +
-            "GenderPet TEXT , " +
-            "HealthPet TEXT , " +
-            "Price TEXT " +
+            "namePet TEXT , " +
+            "agePet TEXT , " +
+            "weightPet TEXT , " +
+            "genderPet TEXT , " +
+            "healthPet TEXT , " +
+            "price TEXT " +
             ")";
 
     public ProductDAO(final Context context){
@@ -38,19 +38,19 @@ public class ProductDAO {
 
         SQLiteDatabase sqLiteDatabase = this.helper.getReadableDatabase();
         Cursor curcor = sqLiteDatabase.rawQuery( SELECT , null);
-        curcor.moveToFirst();
-        if (curcor.getCount() > 0) {
-            while (curcor.moveToNext()) {
+        if (curcor.moveToFirst()) {
+            while (!curcor.isAfterLast()) {
                 Product product = new Product();
-                product.setCode(curcor.getString(curcor.getColumnIndex("CodePet")));
+                product.setCode(curcor.getString(curcor.getColumnIndex("IDPet")));
                 product.setProductImage(curcor.getBlob(curcor.getColumnIndex("productImage")));
-                product.setName(curcor.getString(curcor.getColumnIndex("NamePet")));
-                product.setAge(curcor.getInt(curcor.getColumnIndex("AgePet")));
-                product.setWeight(curcor.getDouble(curcor.getColumnIndex("WeightPet")));
-                product.setGender(curcor.getString(curcor.getColumnIndex("GenderPet")));
-                product.setHealth(curcor.getString(curcor.getColumnIndex("HealthPet")));
-                product.setPrice(curcor.getDouble(curcor.getColumnIndex("Price")));
+                product.setName(curcor.getString(curcor.getColumnIndex("namePet")));
+                product.setAge(curcor.getInt(curcor.getColumnIndex("agePet")));
+                product.setWeight(curcor.getDouble(curcor.getColumnIndex("weightPet")));
+                product.setGender(curcor.getString(curcor.getColumnIndex("genderPet")));
+                product.setHealth(curcor.getString(curcor.getColumnIndex("healthPet")));
+                product.setPrice(curcor.getDouble(curcor.getColumnIndex("price")));
 listProduct.add(product);
+                curcor.moveToNext();
             }
             curcor.close();
         }
@@ -59,44 +59,47 @@ listProduct.add(product);
 
     public int insertProduct(Product product) {
         ContentValues values = new ContentValues();
-        values.put("CodePet", product.getCode());
+        values.put("IDPet", product.getCode());
         values.put("productImage", product.getProductImage());
-        values.put("NamePet", product.getName());
-        values.put("AgePet", product.getAge());
-        values.put("WeightPet", product.getWeight());
-        values.put("GenderPet", product.getGender());
-        values.put("HealthPet", product.getHealth());
-        values.put("Price",product.getPrice());
+        values.put("namePet", product.getName());
+        values.put("agePet", product.getAge());
+        values.put("weightPet", product.getWeight());
+        values.put("genderPet", product.getGender());
+        values.put("healthPet", product.getHealth());
+        values.put("price",product.getPrice());
 
         try {
             if (db.insert(PRODUCT_TABLE, null, values) < 0) {
+                Log.e("aaa","a123");
+
                 return -1;
             }
         } catch (Exception e) {
 
         }
+        Log.e("bbb","a234");
         return 1;
    
     }
 
     public int updateProduct(Product product) {
         ContentValues values = new ContentValues();
-        values.put("CodePet", product.getCode());
+        values.put("IDPet", product.getCode());
         values.put("productImage", product.getProductImage());
-        values.put("NamePet", product.getName());
-        values.put("AgePet", product.getAge());
-        values.put("WeightPet", product.getWeight());
-        values.put("GenderPet", product.getGender());
-        values.put("HealthPet", product.getHealth());
-        values.put("Price",product.getPrice());
-        int kq = db.update(PRODUCT_TABLE, values, "CodePet=?", new String[]{product.getCode()});
+        values.put("namePet", product.getName());
+        values.put("agePet", product.getAge());
+        values.put("weightPet", product.getWeight());
+        values.put("genderPet", product.getGender());
+        values.put("healthPet", product.getHealth());
+        values.put("price",product.getPrice());
+        int kq = db.update(PRODUCT_TABLE, values, "IDPet=?", new String[]{product.getCode()});
         if (kq == 0) {
             return -1;
         }
         return 1;
     }
     public int delProduct(String idProduct){
-        int kq = db.delete(PRODUCT_TABLE, "CodePet=?", new String[]{idProduct});
+        int kq = db.delete(PRODUCT_TABLE, "IDPet=?", new String[]{idProduct});
         if (kq==0){
             return -1;
         }

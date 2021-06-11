@@ -163,13 +163,13 @@ public class AddBillActivity extends AppCompatActivity implements DatePickerDial
             Product product = new Product();
 //            product.setProductImage(bundle.getByteArray("image"));
             product.setProductImage(bundle.getByteArray("productImage"));
-            product.setCode(bundle.getString("CodePet"));
-            product.setName(bundle.getString("NamePet"));
-           product.setAge(bundle.getInt("AgePet"));
-       product.setWeight( bundle.getDouble("WeightPet"));
-            product.setGender(bundle.getString("GenderPet"));
-            product.setHealth(bundle.getString("HealthPet"));
-            product.setPrice(bundle.getDouble("Price"));
+            product.setCode(bundle.getString("IDPet"));
+            product.setName(bundle.getString("namePet"));
+           product.setAge(bundle.getInt("agePet"));
+       product.setWeight( bundle.getDouble("weightPet"));
+            product.setGender(bundle.getString("genderPet"));
+            product.setHealth(bundle.getString("healthPet"));
+            product.setPrice(bundle.getDouble("price"));
             productList.add(product);
             tvTongTien.setText(String.valueOf(sumOfProductPrice()));
         }
