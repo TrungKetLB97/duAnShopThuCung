@@ -77,7 +77,7 @@ public class ListProductActivity_NV extends AppCompatActivity {
                 startActivity(intent1);;
                 break;
             case R.id.themSanPham:
-                Intent intent = new Intent(ListProductActivity_NV.this, addProductActivity_NV.class);
+                Intent intent = new Intent(ListProductActivity_NV.this, addProductActivity.class);
                 startActivity(intent);
                 break;
 
