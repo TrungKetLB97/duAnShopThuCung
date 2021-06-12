@@ -1,4 +1,4 @@
-package com.shopThuCung.duanshopthucung.Product;
+package com.shopThuCung.duanshopthucung.Product.Product_NV;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -20,24 +20,26 @@ import com.shopThuCung.duanshopthucung.Bill.AddBillActivity;
 import com.shopThuCung.duanshopthucung.Bill.Bill;
 import com.shopThuCung.duanshopthucung.DataBase.ProductDAO;
 import com.shopThuCung.duanshopthucung.Product.Product;
+import com.shopThuCung.duanshopthucung.Product.ProductAdapter;
+import com.shopThuCung.duanshopthucung.Product.editProductActivity;
 import com.shopThuCung.duanshopthucung.R;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
+public class ProductAdapterNV extends RecyclerView.Adapter<ProductAdapterNV.ViewHolder> {
     private List<Product> productList;
     private List<Product> productListSort;
     private OnItemClickListener listener;
     private ProductDAO dao;
     private Filter PFilter;
-private ItemClickListener itemClickListener;
+    private ItemClickListener itemClickListener;
 
-public ProductAdapter(List<Product> productList, ItemClickListener itemClickListener){
-    this.productList = productList;
-    this.itemClickListener = itemClickListener;
-}
+    public ProductAdapterNV(List<Product> productList, ItemClickListener itemClickListener){
+        this.productList = productList;
+        this.itemClickListener = itemClickListener;
+    }
 
     CustomFilter customFilter;
     @Override
@@ -96,24 +98,24 @@ public ProductAdapter(List<Product> productList, ItemClickListener itemClickList
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
     }
-public interface ItemClickListener{
-    void onItemClick(Product product);
-}
-    public ProductAdapter(List<Product> productList) {
+    public interface ItemClickListener{
+        void onItemClick(Product product);
+    }
+    public ProductAdapterNV(List<Product> productList) {
         this.productList = productList;
         this.productListSort = productList;
     }
 
     @NonNull
     @Override
-    public ProductAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_product_layout, parent, false);
+    public ProductAdapterNV.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_product_layout_nv, parent, false);
         dao = new ProductDAO(parent.getContext());
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ProductAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ProductAdapterNV.ViewHolder holder, int position) {
 
         holder.imgProduct.setImageBitmap(
                 getImage(productList.get(position).getProductImage()));
@@ -142,7 +144,7 @@ public interface ItemClickListener{
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), editProductActivity.class);
+                Intent intent = new Intent(v.getContext(), editProductActivity_NV.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("IDPet", productList.get(position).getCode());
                 bundle.putByteArray("productImage", productList.get(position).getProductImage());

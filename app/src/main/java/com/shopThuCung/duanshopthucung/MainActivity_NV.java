@@ -13,6 +13,7 @@ import com.shopThuCung.duanshopthucung.Bill.ListBillActivity;
 import com.shopThuCung.duanshopthucung.Customer.Customer_NV.ListCustomerActivity_NV;
 import com.shopThuCung.duanshopthucung.Customer.ListCustomerActivity;
 import com.shopThuCung.duanshopthucung.Product.ListProductActivity;
+import com.shopThuCung.duanshopthucung.Product.Product_NV.ListProductActivity_NV;
 import com.shopThuCung.duanshopthucung.Revenue.RevenueActivity;
 import com.shopThuCung.duanshopthucung.nhanVien.ListNhanVienActivity;
 
@@ -25,7 +26,7 @@ public class MainActivity_NV extends AppCompatActivity {
     }
 
     public void thuCung_NV(View view) {
-        Intent intent = new Intent(MainActivity_NV.this, ListProductActivity.class);
+        Intent intent = new Intent(MainActivity_NV.this, ListProductActivity_NV.class);
         startActivity(intent);
     }
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Product_NV.addProductActivity_NV">
+    tools:context=".Product.Product_NV.addProductActivity_NV">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_edit_product"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <EditText
-            android:id="@+id/add_Product_edtCode"
+            android:id="@+id/add_Product_edtCodeNV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout01">
 
         <EditText
-            android:id="@+id/add_Product_edtName"
+            android:id="@+id/add_Product_edtNameNV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <EditText
-            android:id="@+id/add_Product_edtTuoi"
+            android:id="@+id/add_Product_edtTuoiNV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
@@ -110,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
         <EditText
-            android:id="@+id/add_Product_edtCanNang"
+            android:id="@+id/add_Product_edtCanNangNV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
@@ -129,7 +129,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
         <EditText
-            android:id="@+id/add_Product_edtGioiTinh"
+            android:id="@+id/add_Product_edtGioiTinhNV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
@@ -147,7 +147,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout1">
 
         <EditText
-            android:id="@+id/add_Product_edtSucKhoe"
+            android:id="@+id/add_Product_edtSucKhoeNV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
@@ -166,7 +166,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout0">
 
         <EditText
-            android:id="@+id/add_Product_edtGia"
+            android:id="@+id/add_Product_edtGiaNV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
@@ -174,12 +174,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonNV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:background="@drawable/round_bg"
-        android:onClick="postProduct"
+        android:onClick="postProductNV"
         android:text="Thêm"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"

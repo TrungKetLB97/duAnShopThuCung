@@ -17,7 +17,10 @@
         android:roundIcon="@drawable/thucung"
         android:supportsRtl="true"
         android:theme="@style/Theme.DuAnShopThuCung">
-        <activity android:name=".nhanVien.ProductNV.AddProductNVActivity"></activity>
+        <activity android:name=".Product.Product_NV.editProductActivity_NV" />
+        <activity android:name=".Product.Product_NV.ListProductActivity_NV" />
+        <activity android:name=".Product.Product_NV.addProductActivity_NV" />
+        <activity android:name=".nhanVien.ProductNV.AddProductNVActivity" />
         <activity android:name=".Login.CreateAccNVActivity" />
         <activity android:name=".Login.CreateAccAdminActivity" />
         <activity android:name=".Login.LoginActivity">
@@ -49,10 +52,8 @@
         <activity android:name=".Product.editProductActivity" />
         <activity android:name=".Product.chiTietThuCung" />
         <activity android:name=".Product.ListProductActivity" />
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".SplashScreenActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashScreenActivity" />
     </application>
 
 </manifest>

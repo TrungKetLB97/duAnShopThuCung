@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Product_NV.editProductActivity_NV">
+    tools:context=".Product.Product_NV.editProductActivity_NV">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_edit_product"
+        android:id="@+id/toolbar_edit_product_nv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_700"
+        android:background="@color/cardview_shadow_start_color"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_edit_product">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_edit_product_nv">
 
         <ImageView
             android:id="@+id/editProduct_Picture"
