@@ -23,6 +23,7 @@ public class NhanVienAdapter extends BaseAdapter {
     public NhanVienAdapter(List<NhanVien> nhanVienList, Context context) {
         this.nhanVienList = nhanVienList;
         this.context = context;
+        this.nhanVienListSort = nhanVienList;
     }
 
 
@@ -39,7 +40,7 @@ public class NhanVienAdapter extends BaseAdapter {
             if(constraint!=null || constraint.length()>0){
                 constraint = constraint.toString().toUpperCase();
                 ArrayList<NhanVien> filter = new ArrayList<>();
-                for (int i=0; i<nhanVienListSort.size();i++){
+                for (int i=0; i < nhanVienListSort.size(); i++){
                     if(nhanVienListSort.get(i).getTenNV().toUpperCase().contains(constraint)){
                         NhanVien nhanVien1 = new NhanVien(
                                 nhanVienListSort.get(i).getIdNV(),
@@ -55,7 +56,7 @@ public class NhanVienAdapter extends BaseAdapter {
                 results.values=filter;
             }else {
                 results.count = nhanVienListSort.size();
-                results.values=nhanVienListSort;
+                results.values = nhanVienListSort;
             }
             return results;
         }
@@ -66,9 +67,6 @@ public class NhanVienAdapter extends BaseAdapter {
             notifyDataSetChanged();
         }
     }
-
-
-
 
     @Override
     public int getCount() {

@@ -23,6 +23,7 @@ public class ListNhanVienActivity extends AppCompatActivity {
     NhanVien nhanVien;
     EditText edtSearchNV;
     int pos=0;
+    NhanVienAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +33,12 @@ public class ListNhanVienActivity extends AppCompatActivity {
         lvNV = findViewById(R.id.lvNV);
         edtSearchNV = findViewById(R.id.edtSearhNV);
 
-        nhanVienList = new ArrayList<NhanVien>();
+        nhanVienList = new ArrayList<>();
         nhanVienDAO = new NhanVienDAO(this);
         nhanVienList = nhanVienDAO.getAllNVString();
         nhanVien = new NhanVien();
 
-        NhanVienAdapter adapter = new NhanVienAdapter(nhanVienList,this);
+        adapter = new NhanVienAdapter(nhanVienList,this);
         lvNV.setAdapter(adapter);
 
         lvNV.setOnItemClickListener((parent, view, position, id) -> {

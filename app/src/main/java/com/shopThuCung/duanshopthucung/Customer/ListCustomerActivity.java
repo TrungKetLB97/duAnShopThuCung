@@ -11,6 +11,8 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.shopThuCung.duanshopthucung.Customer.Customer_NV.ChiTietCustomerActivity_NV;
+import com.shopThuCung.duanshopthucung.Customer.Customer_NV.ListCustomerActivity_NV;
 import com.shopThuCung.duanshopthucung.DataBase.CustomerDAO;
 import com.shopThuCung.duanshopthucung.R;
 
@@ -27,9 +29,8 @@ public class ListCustomerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_customer);
-
-        lvKH = findViewById(R.id.lvKH_NV);
-//        edtSearchCus = findViewById(R.id.edtSearchCus_NV);
+        lvKH = findViewById(R.id.lvKH);
+        edtSearchCus = findViewById(R.id.edtSearchCus);
 
         customerList = new ArrayList<>();
         customerDAO = new CustomerDAO(this);

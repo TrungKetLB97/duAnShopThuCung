@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.shopThuCung.duanshopthucung.Customer.AddCustomerActivity;
@@ -24,11 +27,13 @@ public class ListCustomerActivity_NV extends AppCompatActivity {
     CustomerDAO customerDAO;
     ListView lvKH;
     Customer customer;
+    EditText edtSearchCus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_customer_nv);
         lvKH = findViewById(R.id.lvKH_NV);
+        edtSearchCus = findViewById(R.id.edtSearchCus_NV);
 
         customerList = new ArrayList<>();
         customerDAO = new CustomerDAO(this);
@@ -47,11 +52,22 @@ public class ListCustomerActivity_NV extends AppCompatActivity {
             i.putExtra("DiaChiKH", customer.getDiaChiKH());
             startActivity(i);
         });
+
+        edtSearchCus.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                adapter.getFilter().filter(s);
+            }
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
     }
 
     public void addKhachHang(View view) {
         startActivity(new Intent(this, AddCustomerActivity_NV.class));
-    }
-    public void searchKhachHang(View view) {
     }
 }

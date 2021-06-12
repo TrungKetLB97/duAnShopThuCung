@@ -22,6 +22,7 @@ public class CustomerAdapter extends BaseAdapter {
     public CustomerAdapter(List<Customer> customerList, Context context) {
         this.customerList = customerList;
         this.context = context;
+        this.customerListSort = customerList;
     }
 
     @Override
