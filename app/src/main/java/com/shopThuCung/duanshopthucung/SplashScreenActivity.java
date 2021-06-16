@@ -16,7 +16,7 @@ import com.shopThuCung.duanshopthucung.MainActivity;
 import com.shopThuCung.duanshopthucung.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
-    private static final int SPLASH_TIME_OUT = 20000;
+    private static final int SPLASH_TIME_OUT = 2000;
     private Animation topAnim, bottomAnim;
     private ImageView image;
     private TextView tvLogo, tvSlogan;
