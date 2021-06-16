@@ -21,7 +21,7 @@
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
-            card_view:srcCompat="@drawable/round_bg" />
+            card_view:srcCompat="@drawable/pet" />
 
         <TextView
             android:id="@+id/tvBillId"
@@ -90,7 +90,7 @@
             android:layout_marginRight="16dp"
             android:background="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/database"
+            android:src="@drawable/trash"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintTop_toTopOf="parent" />

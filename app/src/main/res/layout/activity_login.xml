@@ -21,11 +21,11 @@
         app:titleMarginStart="140dp"/>
 
     <ImageView
-        android:layout_margin="8dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/thucung"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="156dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:src="@drawable/unnamed" />
 
     <EditText
         android:layout_marginLeft="16dp"

@@ -12,7 +12,7 @@
         android:id="@+id/toolbarDanhSachHoaDon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffca60"
+        android:background="@color/purple_700"
         app:title="HÓA ĐƠN"
         app:titleMarginStart="150dp"/>
     <EditText
@@ -30,15 +30,15 @@
         android:padding="10dp"
         android:id="@+id/rvBill"/>
 
-    <ImageButton
-        android:id="@+id/Bill_themBill"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginLeft="330dp"
-        android:layout_marginBottom="30dp"
-        android:background="@color/purple_200"
-        android:onClick="postBill"
-        android:src="@drawable/ic_baseline_add_circle_24" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/Bill_themBill"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginTop="300dp"-->
+<!--        android:layout_marginLeft="330dp"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:background="@color/purple_200"-->
+<!--        android:onClick="postBill"-->
+<!--        android:src="@drawable/ic_baseline_add_circle_24" />-->
 
 </LinearLayout>

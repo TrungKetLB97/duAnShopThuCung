@@ -1,10 +1,14 @@
 package com.shopThuCung.duanshopthucung.Customer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,6 +28,7 @@ public class EditCustomerActivity extends AppCompatActivity {
     EditText edtTenKh, edtSdtKH, edtDiaChiKH;
     String idKH, tenKH, sdtKH, diaChiKH;
     CustomerDAO customerDAO;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,12 @@ public class EditCustomerActivity extends AppCompatActivity {
 
         customerDAO = new CustomerDAO(this);
         init();
+
+        Toolbar
+                toolbar = findViewById(R.id.toolbar_edit_KhachHang);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         Intent i = getIntent();
         idKH = i.getStringExtra("IdKH");
@@ -63,9 +74,25 @@ public class EditCustomerActivity extends AppCompatActivity {
             Toast.makeText(this, "Sua khong thanh cong", Toast.LENGTH_SHORT).show();
         } else{
             Toast.makeText(this, "Sua thanh cong", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(EditCustomerActivity.this, ListCustomerActivity.class));
+
         }
-        startActivity(new Intent(EditCustomerActivity.this, MainActivity.class));
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.kocogi, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent intent1 = new Intent(EditCustomerActivity.this, ListCustomerActivity.class);
+                startActivity(intent1);;
+                break;
+        }
+        return true;
+    }
 }

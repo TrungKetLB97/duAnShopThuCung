@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.shopThuCung.duanshopthucung.Bill.AddBillActivity;
 import com.shopThuCung.duanshopthucung.Bill.Bill;
+import com.shopThuCung.duanshopthucung.Bill.Bill_NV.AddBillActivity_NV;
 import com.shopThuCung.duanshopthucung.DataBase.ProductDAO;
 import com.shopThuCung.duanshopthucung.Product.Product;
 import com.shopThuCung.duanshopthucung.Product.ProductAdapter;
@@ -126,7 +127,8 @@ public class ProductAdapterNV extends RecyclerView.Adapter<ProductAdapterNV.View
         holder.imageButtonArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), AddBillActivity.class);
+
+                Intent intent = new Intent(v.getContext(), AddBillActivity_NV.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("IDPet", productList.get(position).getCode());
                 bundle.putByteArray("productImage", productList.get(position).getProductImage());

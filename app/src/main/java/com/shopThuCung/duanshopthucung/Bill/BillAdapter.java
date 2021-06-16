@@ -17,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.shopThuCung.duanshopthucung.Bill.Bill;
 import com.shopThuCung.duanshopthucung.DataBase.BillDAO;
+import com.shopThuCung.duanshopthucung.DataBase.ProductDAO;
+import com.shopThuCung.duanshopthucung.Product.Product;
 import com.shopThuCung.duanshopthucung.R;
 
 
@@ -28,7 +30,13 @@ public class BillAdapter extends RecyclerView.Adapter<BillAdapter.ViewHolder> {
     List<Bill> billList;
     List<Bill> billListsort;
     BillDAO billDAO;
+//    List<Product> productList;
+//    ProductDAO productDAO;
+
+
     CustomFilter customFilter;
+
+
 
     public BillAdapter(List<Bill> billList) {
         this.billList = billList;
@@ -85,7 +93,6 @@ public class BillAdapter extends RecyclerView.Adapter<BillAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull BillAdapter.ViewHolder holder, int position) {
         holder.tvBillId.setText("Mã hóa đơn : " + billList.get(position).getMaHoaDon());
         holder.tvCustomerName.setText("Khách hàng : " + billList.get(position).getTenKhachHang());
-//        holder.tvProductName.setText("Sản phẩm :  " + billList.get(position).getTenSanPham() );
         holder.tvTotalMoney.setText("Tổng tiền : " + billList.get(position).getTongTien() + " VND");
         holder.tvNgay.setText("Ngày mua : " +billList.get(position).getDate());
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
@@ -108,7 +115,7 @@ public class BillAdapter extends RecyclerView.Adapter<BillAdapter.ViewHolder> {
 //
 //
 //                dialog.show();
-                Log.d(TAG, "onClick: " + billDAO.getAllBill().get(position).getDate());
+                Log.d(TAG, "onClick: " + billDAO.getAllBill().get(position).getDate());  
             }
         });
     }
@@ -130,7 +137,6 @@ public class BillAdapter extends RecyclerView.Adapter<BillAdapter.ViewHolder> {
             tvBillId = itemView.findViewById(R.id.tvBillId);
             tvCustomerName = itemView.findViewById(R.id.tvCustomerName);
             tvTotalMoney = itemView.findViewById(R.id.tvTotalMoney);
-//            tvProductName = itemView.findViewById(R.id.ProductName);
             btnDelete = itemView.findViewById(R.id.btnDelete);
             tvNgay = itemView.findViewById(R.id.tvNgay);
         }

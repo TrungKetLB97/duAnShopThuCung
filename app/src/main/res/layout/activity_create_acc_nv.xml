@@ -8,7 +8,7 @@
     tools:context=".Login.CreateAccNVActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_add_khachHang"
+        android:id="@+id/toolbar_staffs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple_700"
@@ -51,7 +51,7 @@
 
     <Button
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="50dp"
         android:onClick="AddAccNV"
         android:text="Create Account NV"
         android:layout_width="wrap_content"

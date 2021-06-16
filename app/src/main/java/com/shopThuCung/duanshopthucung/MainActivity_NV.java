@@ -9,12 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.shopThuCung.duanshopthucung.Bill.Bill_NV.ListBillActivity_NV;
 import com.shopThuCung.duanshopthucung.Bill.ListBillActivity;
 import com.shopThuCung.duanshopthucung.Customer.Customer_NV.ListCustomerActivity_NV;
 import com.shopThuCung.duanshopthucung.Customer.ListCustomerActivity;
+import com.shopThuCung.duanshopthucung.Login.LoginActivity;
 import com.shopThuCung.duanshopthucung.Product.ListProductActivity;
 import com.shopThuCung.duanshopthucung.Product.Product_NV.ListProductActivity_NV;
 import com.shopThuCung.duanshopthucung.Revenue.RevenueActivity;
+import com.shopThuCung.duanshopthucung.Revenue.RevenueActivityNV;
 import com.shopThuCung.duanshopthucung.nhanVien.ListNhanVienActivity;
 
 public class MainActivity_NV extends AppCompatActivity {
@@ -36,7 +39,7 @@ public class MainActivity_NV extends AppCompatActivity {
     }
 
     public void hoaDon_NV(View view) {
-        Intent intent = new Intent(MainActivity_NV.this, ListBillActivity.class);
+        Intent intent = new Intent(MainActivity_NV.this, ListBillActivity_NV.class);
         startActivity(intent);
     }
 
@@ -46,12 +49,17 @@ public class MainActivity_NV extends AppCompatActivity {
         EditText editText = dialog.findViewById(R.id.tvMucTieu);
         Button button = dialog.findViewById(R.id.btnTT);
         button.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity_NV.this, RevenueActivity.class);
+            Intent intent = new Intent(MainActivity_NV.this, RevenueActivityNV.class);
             Bundle bundle = new Bundle();
             bundle.putDouble("MT", Double.parseDouble(editText.getText().toString()));
             intent.putExtras(bundle);
             startActivity(intent);
         });
         dialog.show();
+    }
+
+    public void logoutNV(View view) {
+        Intent intent = new Intent(MainActivity_NV.this, LoginActivity.class);
+        startActivity(intent);
     }
 }

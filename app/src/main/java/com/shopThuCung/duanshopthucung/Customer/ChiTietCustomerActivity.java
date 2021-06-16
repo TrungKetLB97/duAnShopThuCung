@@ -1,13 +1,19 @@
 package com.shopThuCung.duanshopthucung.Customer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.shopThuCung.duanshopthucung.Customer.Customer_NV.ChiTietCustomerActivity_NV;
+import com.shopThuCung.duanshopthucung.Customer.Customer_NV.ListCustomerActivity_NV;
 import com.shopThuCung.duanshopthucung.DataBase.CustomerDAO;
 import com.shopThuCung.duanshopthucung.MainActivity;
 import com.shopThuCung.duanshopthucung.R;
@@ -18,7 +24,7 @@ public class ChiTietCustomerActivity extends AppCompatActivity {
     TextView tvIDKH, tvTenKH, tvSdtKH, tvDiaChiKH;
     String idKH, tenKH, sdtKH, diaChiKH;
     CustomerDAO customerDAO;
-
+Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +38,16 @@ public class ChiTietCustomerActivity extends AppCompatActivity {
         sdtKH = i.getStringExtra("SdtKH");
         diaChiKH = i.getStringExtra("DiaChiKH");
 
-        tvIDKH.setText("ID: "+idKH);
-        tvTenKH.setText("Ten: "+tenKH);
-        tvSdtKH.setText("SDT: "+sdtKH);
-        tvDiaChiKH.setText("Dia Chi: "+diaChiKH);
+        Toolbar
+                toolbar = findViewById(R.id.toolbar_detail_khachHang);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        tvIDKH.setText("ID: " + idKH);
+        tvTenKH.setText("Tên: " + tenKH);
+        tvSdtKH.setText("SĐT: " + sdtKH);
+        tvDiaChiKH.setText("Địa chỉ : " + diaChiKH);
 
     }
 
@@ -61,8 +73,27 @@ public class ChiTietCustomerActivity extends AppCompatActivity {
             Toast.makeText(this, "Xoa khong thanh cong", Toast.LENGTH_SHORT).show();
         } else{
             Toast.makeText(this, "Xoa thanh cong", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ChiTietCustomerActivity.this, ListCustomerActivity.class);
+            startActivity(intent);
         }
 
-        startActivity(new Intent(ChiTietCustomerActivity.this, MainActivity.class));
+//        startActivity(new Intent(ChiTietCustomerActivity.this, ListCustomerActivity.class));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.kocogi, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent intent1 = new Intent(ChiTietCustomerActivity.this, ListCustomerActivity.class);
+                startActivity(intent1);;
+                break;
+        }
+        return true;
     }
 }

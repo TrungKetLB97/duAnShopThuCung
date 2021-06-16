@@ -8,7 +8,7 @@
     tools:context=".Login.CreateAccAdminActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_add_khachHang"
+        android:id="@+id/toolbar_admin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple_700"
@@ -19,6 +19,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:title="ĐĂNG KÝ ADMIN"
         app:titleMarginStart="140dp"/>
+
+
 
     <EditText
         android:layout_marginLeft="16dp"
@@ -53,10 +55,10 @@
 
     <Button
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="50dp"
         android:onClick="AddAccAdmin"
         android:text="Create Account Admin"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="50dp"/>
 
 </LinearLayout>

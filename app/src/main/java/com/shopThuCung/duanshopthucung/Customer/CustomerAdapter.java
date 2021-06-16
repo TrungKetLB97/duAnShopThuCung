@@ -81,7 +81,7 @@ public class CustomerAdapter extends BaseAdapter {
     }
 
     public class ViewHolder{
-        TextView tvName;
+        TextView tvName, tvPhone;
     }
 
     @Override
@@ -92,12 +92,14 @@ public class CustomerAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(context).inflate(R.layout.item_list_customer_layout,null,false);
             viewHolder = new ViewHolder();
             viewHolder.tvName = convertView.findViewById(R.id.khachHang_listCustimer_tvNameKH);
+            viewHolder.tvPhone = convertView.findViewById(R.id.khachHang_listCustimer_tvPhone);
             convertView.setTag(viewHolder);
         } else{
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        viewHolder.tvName.setText(customer.getTenKH());
+        viewHolder.tvName.setText("Tên khách hàng : " + customer.getTenKH());
+        viewHolder.tvPhone.setText("SĐT : " + customer.getSdtKH());
         return convertView;
     }
 }

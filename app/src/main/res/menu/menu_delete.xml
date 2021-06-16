@@ -4,6 +4,6 @@
     <item
         app:showAsAction="always"
         android:id="@+id/deleteProduct"
-        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:icon="@drawable/trash"
         android:title="" />
 </menu>

@@ -35,7 +35,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/nhanvien"
+            android:src="@drawable/staff"
             android:layout_gravity="center"/>
     </androidx.cardview.widget.CardView>
 
@@ -64,6 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
+            android:inputType="text"
             android:hint="Tên" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,6 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
+            android:inputType="number"
             android:hint="Sdt" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,6 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
+            android:inputType="text"
             android:hint="Chức Vụ" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -120,6 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
+            android:inputType="text"
             android:hint="Địa Chỉ" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -137,6 +141,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
+            android:inputType="date"
             android:hint="Ngày Sinh" />
     </com.google.android.material.textfield.TextInputLayout>
 

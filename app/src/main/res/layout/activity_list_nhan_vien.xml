@@ -12,7 +12,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textStyle="bold"
-        android:id="@+id/toolbar"/>
+        android:id="@+id/toolbar_listnv"/>
 
     <EditText
         android:hint="Nhập tên NV"
@@ -21,15 +21,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/edtSearhNV"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_listnv"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintBottom_toTopOf="@+id/lvNV"
         android:layout_margin="8dp"/>
 
     <ListView
         android:id="@+id/lvNV"
-        android:layout_width="393dp"
-        android:layout_height="380dp"
+        android:layout_width="match_parent"
+        android:layout_height="683dp"
         android:layout_margin="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -37,11 +37,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.257" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_listnv"
+        app:layout_constraintVertical_bias="0.979" />
 
-    <ImageButton android:background="@color/purple_200" android:layout_height="64dp" android:layout_width="64dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp" android:layout_marginEnd="16dp" android:src="@drawable/ic_baseline_add_circle_24" android:onClick="addNhanVien" android:layout_marginRight="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

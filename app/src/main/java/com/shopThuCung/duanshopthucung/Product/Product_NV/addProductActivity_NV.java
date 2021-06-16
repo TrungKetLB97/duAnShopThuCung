@@ -203,7 +203,7 @@ public class addProductActivity_NV extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // handle arrow click here
         if (item.getItemId() == android.R.id.home) {
-            Intent intent1 = new Intent(addProductActivity_NV.this, MainActivity_NV.class); // close this activity and return to preview activity (if there is any)
+            Intent intent1 = new Intent(addProductActivity_NV.this, ListProductActivity_NV.class); // close this activity and return to preview activity (if there is any)
             startActivity(intent1);
         }
 

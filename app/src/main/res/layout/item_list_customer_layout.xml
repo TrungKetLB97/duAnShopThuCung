@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_margin="4dp"
-            android:src="@drawable/khachhang"/>
+            android:src="@drawable/customer"/>
 
         <TextView
             android:id="@+id/khachHang_listCustimer_tvNameKH"
@@ -23,6 +23,17 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="165dp"
+            android:text="Tên Khách Hàng"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/khachHang_listCustimer_tvPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="215dp"
+            android:layout_marginBottom="8dp"
             android:text="Tên Khách Hàng"
             android:textSize="20dp"
             android:textStyle="bold"

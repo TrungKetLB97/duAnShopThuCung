@@ -84,7 +84,8 @@ public class NhanVienAdapter extends BaseAdapter {
     }
 
     private class ViewHolder{
-        TextView tvName;
+        TextView tvName, tvChucvu;
+
     }
 
     @Override
@@ -95,12 +96,15 @@ public class NhanVienAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(context).inflate(R.layout.item_list_nhan_vien_layout,parent,false);
             viewHolder = new ViewHolder();
             viewHolder.tvName = convertView.findViewById(R.id.nhanVien_listNhanVien_tvName);
+            viewHolder.tvChucvu = convertView.findViewById(R.id.nhanVien_listNhanVien_tvChucvu);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        viewHolder.tvName.setText(nv.getTenNV());
+        viewHolder.tvName.setText("Tên nhân viên : " + nv.getTenNV());
+        viewHolder.tvChucvu.setText("Chức vụ : " + nv.getChucVuNV());
+
         return convertView;
     }
 }

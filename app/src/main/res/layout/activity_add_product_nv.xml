@@ -7,10 +7,10 @@
     tools:context=".Product.Product_NV.addProductActivity_NV">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_edit_product"
+        android:id="@+id/toolbar_edit_product_nv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_700"
+        android:background="#7FFFD4"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_edit_product">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_edit_product_nv">
 
         <ImageView
             android:id="@+id/add_Product_Picture"

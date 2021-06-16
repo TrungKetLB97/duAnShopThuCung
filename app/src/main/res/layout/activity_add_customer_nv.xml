@@ -10,7 +10,7 @@
         android:id="@+id/toolbar_add_khachHang_NV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_700"
+        android:background="#7FFFD4"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -36,7 +36,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/khachhang"
+            android:src="@drawable/customer"
             android:layout_gravity="center"/>
     </androidx.cardview.widget.CardView>
 
@@ -77,6 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
+            android:inputType="text"
             android:hint="Tên" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -97,6 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
+            android:inputType="number"
             android:hint="Sdt" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,6 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
+            android:inputType="text"
             android:hint="Địa Chỉ" />
     </com.google.android.material.textfield.TextInputLayout>
 

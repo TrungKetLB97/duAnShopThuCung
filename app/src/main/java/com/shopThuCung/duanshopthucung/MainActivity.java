@@ -12,6 +12,7 @@ import android.widget.EditText;
 //import com.shopThuCung.duanshopthucung.Bill.ListBillActivity;
 import com.shopThuCung.duanshopthucung.Bill.ListBillActivity;
 import com.shopThuCung.duanshopthucung.Customer.ListCustomerActivity;
+import com.shopThuCung.duanshopthucung.Login.LoginActivity;
 import com.shopThuCung.duanshopthucung.Product.ListProductActivity;
 import com.shopThuCung.duanshopthucung.Revenue.RevenueActivity;
 import com.shopThuCung.duanshopthucung.nhanVien.ListNhanVienActivity;
@@ -57,5 +58,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
         dialog.show();
+    }
+
+    public void logout(View view) {
+        Intent intent =  new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
     }
 }

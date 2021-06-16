@@ -33,58 +33,134 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
+<!--            ID-->
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="300dp"
                 android:layout_margin="8dp"
-                android:src="@drawable/nhanvien" />
+                android:src="@drawable/staff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:text="ID : "
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/nhanVien_detail_tvIDNhanVien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+<!--            Tên-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/nhanVien_detail_tvIDNhanVien"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="8dp"
-                android:text="ID"
+                android:text="Tên : "
                 android:textSize="20dp" />
-
             <TextView
                 android:id="@+id/nhanVien_detail_tvTenNhanVien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Tên"
                 android:textSize="20dp" />
+        </LinearLayout>
 
+<!--            Chức vụ-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:text="Chức vụ : "
+                android:textSize="20dp" />
             <TextView
                 android:id="@+id/nhanVien_detail_tvChucVuNhanVien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Chức vụ"
                 android:textSize="20dp" />
+        </LinearLayout>
 
+<!--           SĐT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:text="SĐT : "
+                android:textSize="20dp" />
             <TextView
                 android:id="@+id/nhanVien_detail_tvSDTNhanVien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Số Điện Thoại"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+<!--            Địa chỉ-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:text="Địa chỉ : "
                 android:textSize="20dp" />
             <TextView
                 android:id="@+id/nhanVien_detail_tvDiaChiNhanVien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Địa Chỉ"
+
+                android:textSize="20dp" />
+        </LinearLayout>
+
+<!--            Ngày sinh-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:text="Ngày sinh : "
                 android:textSize="20dp" />
             <TextView
                 android:id="@+id/nhanVien_detail_tvNgaySinhNhanVien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Ngày Sinh"
+
                 android:textSize="20dp" />
+        </LinearLayout>
         </LinearLayout>
 
     </ScrollView>

@@ -1,9 +1,13 @@
 package com.shopThuCung.duanshopthucung.nhanVien;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +22,7 @@ public class ChiTietNhanVienActivity extends AppCompatActivity {
     NhanVienDAO nhanVienDAO;
     String idNV, tenNV, chucVuNV, sdtNV, diaChiNV, ngaySinhNV;
     TextView tvIDNV, tvTenNV, tvChucVuNV, tvSdtNV, tvDiaChiNV, tvNgaySinhNV;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +30,12 @@ public class ChiTietNhanVienActivity extends AppCompatActivity {
 
         nhanVienDAO = new NhanVienDAO(this);
         init();
+
+        Toolbar
+                toolbar = findViewById(R.id.toolbar_post_chiTiet);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         Intent i = getIntent();
         idNV = i.getStringExtra("IdNV");
@@ -34,12 +45,12 @@ public class ChiTietNhanVienActivity extends AppCompatActivity {
         diaChiNV = i.getStringExtra("DiaChiNV");
         ngaySinhNV = i.getStringExtra("NgaySinhNV");
 
-        tvIDNV.setText(idNV);
+        tvIDNV.setText( idNV);
         tvTenNV.setText(tenNV);
         tvChucVuNV.setText(chucVuNV);
-        tvSdtNV.setText(sdtNV);
-        tvDiaChiNV.setText(diaChiNV);
-        tvNgaySinhNV.setText(ngaySinhNV);
+        tvSdtNV.setText( sdtNV);
+        tvDiaChiNV.setText( diaChiNV);
+        tvNgaySinhNV.setText( ngaySinhNV);
     }
 
     void init(){
@@ -72,5 +83,23 @@ public class ChiTietNhanVienActivity extends AppCompatActivity {
 
         startActivity(new Intent(ChiTietNhanVienActivity.this, MainActivity.class));
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.kocogi, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent intent1 = new Intent(ChiTietNhanVienActivity.this, ListNhanVienActivity.class);
+                startActivity(intent1);;
+                break;
+
+
+        }
+        return true;
     }
 }

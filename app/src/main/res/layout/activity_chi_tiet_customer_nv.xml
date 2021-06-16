@@ -7,10 +7,10 @@
     tools:context=".Customer.Customer_NV.ChiTietCustomerActivity_NV">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_detail_khachHang"
+        android:id="@+id/toolbar_detail_khachHang_nv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_700"
+        android:background="#7FFFD4"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -29,7 +29,7 @@
         android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_detail_khachHang">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_detail_khachHang_nv">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,9 +38,9 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="300dp"
                 android:layout_margin="8dp"
-                android:src="@drawable/khachhang" />
+                android:src="@drawable/customer" />
 
             <TextView
                 android:id="@+id/khachHang_detail_tvIDKH_NV"
