@@ -31,7 +31,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     private List<Product> productListSort;
     private OnItemClickListener listener;
     private ProductDAO dao;
-    private Filter PFilter;
+
 private ItemClickListener itemClickListener;
 
 public ProductAdapter(List<Product> productList, ItemClickListener itemClickListener){

@@ -47,6 +47,12 @@
             android:layout_marginTop="62dp"
             android:layout_marginRight="5dp"
             android:src="@drawable/thucungbg" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchProduct"
+            android:layout_margin="8dp"
+            android:hint="Tìm kiếm sản phẩm theo tên"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/thuCung_rvThuCung"

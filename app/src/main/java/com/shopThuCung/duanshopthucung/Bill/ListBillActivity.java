@@ -55,6 +55,7 @@ public class ListBillActivity extends AppCompatActivity {
         adapter = new BillAdapter(billList);
         rvBill.setAdapter(adapter);
         EditText searchB = findViewById(R.id.searchBill);
+
         searchB.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {

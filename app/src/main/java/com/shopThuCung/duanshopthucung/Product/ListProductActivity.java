@@ -2,9 +2,12 @@ package com.shopThuCung.duanshopthucung.Product;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 
 import androidx.annotation.NonNull;
@@ -27,11 +30,12 @@ public class ListProductActivity extends AppCompatActivity {
     ProductAdapter adapter;
     List<Product> productList;
     ProductDAO dao;
-
+EditText searchP;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_product);
+         searchP = findViewById(R.id.searchProduct);
 
          Toolbar
         toolbar = findViewById(R.id.toolbar);
@@ -55,9 +59,21 @@ public class ListProductActivity extends AppCompatActivity {
         registerForContextMenu(rvProduct);
 //        rvProduct.addOnItemTouchListener(new);
 
-
-
+        searchP.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                adapter.getFilter().filter(charSequence);
+            }
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -42,6 +42,7 @@ public class BillAdapter extends RecyclerView.Adapter<BillAdapter.ViewHolder> {
         this.billList = billList;
         this.billListsort=billList;
     }
+
     public Filter getFilter() {
         if (customFilter == null){
             customFilter = new CustomFilter();
