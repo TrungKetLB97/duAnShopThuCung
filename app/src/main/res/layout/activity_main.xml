@@ -33,7 +33,7 @@
             android:layout_row="0"
             android:layout_rowWeight="1"
             android:layout_column="0"
-            android:layout_columnWeight="1"
+            android:layout_columnWeight="0"
             android:layout_gravity="fill"
             android:layout_margin="6dp"
             android:onClick="thuCung"
@@ -127,10 +127,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:gravity="center_horizontal"
                     android:text="Khách Hàng"
                     android:textAlignment="center"
-                    android:layout_marginTop="10dp"
                     android:textColor="@color/teal_700"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -174,6 +174,7 @@
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_column="0"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:onClick="thonhKe"
             android:layout_gravity="fill"
