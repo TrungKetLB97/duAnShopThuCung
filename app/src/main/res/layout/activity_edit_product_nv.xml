@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Product.Product_NV.editProductActivity_NV">
@@ -10,19 +11,19 @@
         android:id="@+id/toolbar_edit_product_nv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#7FFFD4"
+        android:background="#7fffd4"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="SỬA THÚ CƯNG"
-        app:titleMarginStart="130dp"/>
+        app:titleMarginStart="65dp"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_width="265dp"
+        android:layout_height="150dp"
         android:layout_marginHorizontal="64dp"
         android:layout_marginTop="20dp"
         app:cardCornerRadius="20dp"
@@ -31,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_edit_product_nv">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_edit_product">
 
         <ImageView
             android:id="@+id/editProduct_Picture"
@@ -41,117 +42,81 @@
             android:layout_gravity="center"/>
     </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+
+
+    <EditText
+        android:id="@+id/editProduct_edtName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView">
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:digits="ăâôơưđêáàảạãấầẩậẫắằẳặẵóòỏọõốồổộỗớờởợỡúùủũụứừựửữéèẻẽẹếềểễệýỳỷỹỵíìĩịỉabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:background="@drawable/round_bg"
+        android:hint="Tên" />
 
-        <EditText
-            android:id="@+id/editProduct_edtName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_bg"
-            android:hint="Tên" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
+
+    <EditText
+        android:id="@+id/editProduct_edtTuoi"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:inputType="number"
+        android:background="@drawable/round_bg"
+        android:hint="Tuổi" />
 
-        <EditText
-            android:id="@+id/editProduct_edtTuoi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_bg"
-            android:hint="Tuổi" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+
+    <EditText
+        android:id="@+id/editProduct_edtCanNang"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:inputType="numberDecimal"
+        android:background="@drawable/round_bg"
+        android:hint="Cân Nặng" />
 
-        <EditText
-            android:id="@+id/editProduct_edtCanNang"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_bg"
-            android:hint="Cân Nặng" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout1"
+
+    <EditText
+        android:id="@+id/editProduct_edtGioiTinh"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:digits="ăâôơưđêáàảạãấầẩậẫắằẳặẵóòỏọõốồổộỗớờởợỡúùủũụứừựửữéèẻẽẹếềểễệýỳỷỹỵíìĩịỉabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:background="@drawable/round_bg"
+        android:hint="Giới Tính" />
 
-        <EditText
-            android:id="@+id/editProduct_edtGioiTinh"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_bg"
-            android:hint="Giới Tính" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout0"
+
+    <EditText
+        android:id="@+id/editProduct_edtSucKhoe"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout1">
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:digits="ăâôơưđêáàảạãấầẩậẫắằẳặẵóòỏọõốồổộỗớờởợỡúùủũụứừựửữéèẻẽẹếềểễệýỳỷỹỵíìĩịỉabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:background="@drawable/round_bg"
+        android:hint="Sức Khỏe" />
 
-        <EditText
-            android:id="@+id/editProduct_edtSucKhoe"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_bg"
-            android:hint="Sức Khỏe" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout01"
+
+    <EditText
+        android:id="@+id/editProduct_edtGia"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout0">
-
-        <EditText
-            android:id="@+id/editProduct_edtGia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_bg"
-            android:hint="Giá" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:inputType="numberDecimal"
+        android:background="@drawable/round_bg"
+        android:hint="Giá" />
 
 
     <Button
@@ -159,6 +124,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
         android:background="@drawable/round_bg"
         android:onClick="editProduct"
         android:text="Sửa"
@@ -167,4 +134,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

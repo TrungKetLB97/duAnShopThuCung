@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="THÊM KHÁCH HÀNG"
-        app:titleMarginStart="130dp"/>
+        app:titleMarginStart="55dp"/>
 
 
     <androidx.cardview.widget.CardView
@@ -76,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
-            android:inputType="text"
+            android:digits="ăâôơưđêáàảạãấầẩậẫắằẳặẵóòỏọõốồổộỗớờởợỡúùủũụứừựửữéèẻẽẹếềểễệýỳỷỹỵíìĩịỉabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
             android:hint="Tên" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -118,7 +118,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_bg"
-            android:inputType="text"
+            android:digits="áàảạãấầẩậẫắằẳặẵóòỏọõốồổộỗớờởợỡúùủũụứừựửữéèẻẽẹếềểễệýỳỷỹỵíìĩịỉăâôơưđêabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
             android:hint="Địa Chỉ" />
     </com.google.android.material.textfield.TextInputLayout>
 

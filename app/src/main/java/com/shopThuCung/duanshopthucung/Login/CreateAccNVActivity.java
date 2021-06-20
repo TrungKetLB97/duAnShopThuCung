@@ -46,7 +46,10 @@ public class CreateAccNVActivity extends AppCompatActivity {
 
     public void AddAccNV(View view) {
         NV nv = new NV();
-        if(edtRePass.getText().toString().equals(edtPass.getText().toString())){
+        if (edtId.getText().toString().equals("") || edtPass.getText().toString().equals("") || edtRePass.getText().toString().equals("")){
+            Toast.makeText(this,"Cannot create account Staff", Toast.LENGTH_SHORT).show();
+        }
+       else if(edtRePass.getText().toString().equals(edtPass.getText().toString())){
             nv.setIdNV(edtId.getText().toString());
             nv.setPasswordNV(edtPass.getText().toString());
             passwordDAO_nv.createPassNV(nv);

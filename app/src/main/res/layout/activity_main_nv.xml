@@ -20,20 +20,20 @@
         />
 
     <GridLayout
+        android:layout_margin="8dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:columnCount="2"
         android:rowCount="3">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="200dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_row="0"
             android:layout_rowWeight="1"
             android:layout_column="0"
-            android:layout_columnWeight="1"
+            android:layout_columnWeight="0"
             android:layout_gravity="fill"
             android:layout_margin="6dp"
             android:onClick="thuCung_NV"
@@ -48,7 +48,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="120dp"
                     android:layout_height="150dp"
                     android:src="@drawable/pets" />
 
@@ -58,22 +58,57 @@
                     android:gravity="center_horizontal"
                     android:text="Thú Cưng"
                     android:textAlignment="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="-10dp"
                     android:textColor="@color/teal_700"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="200dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_row="0"
             android:layout_rowWeight="1"
             android:layout_column="1"
             android:layout_columnWeight="1"
+            android:onClick="customer_NV"
             android:layout_gravity="fill"
             android:layout_margin="6dp"
-            android:onClick="customer_NV"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/customer" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Khách hàng "
+                    android:textAlignment="center"
+                    android:layout_marginTop="-10dp"
+                    android:textColor="@color/teal_700"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="6dp"
+            android:onClick="hoaDon_NV"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp">
 
@@ -85,60 +120,28 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="120dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/customer" />
+                    android:src="@drawable/bill" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
                     android:gravity="center_horizontal"
-                    android:text="Khách Hàng"
+                    android:text="Hóa đơn"
                     android:textAlignment="center"
-                    android:layout_marginTop="10dp"
                     android:textColor="@color/teal_700"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="200dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_row="1"
             android:layout_rowWeight="1"
             android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:onClick="hoaDon_NV"
-            android:layout_gravity="fill"
-            android:layout_margin="6dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="8dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/bill" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="Hóa Đơn"
-                    android:textAlignment="center"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/teal_700"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="200dp"
-            android:layout_column="0"
             android:layout_columnWeight="1"
             android:onClick="thongKe_NV"
             android:layout_gravity="fill"
@@ -153,24 +156,25 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="120dp"
                     android:layout_height="150dp"
                     android:src="@drawable/statistical" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Thống Kê"
+                    android:text="Thống kê"
                     android:textAlignment="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="-10dp"
                     android:textColor="@color/teal_700"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="200dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_column="0"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:onClick="logoutNV"
             android:layout_gravity="fill"
@@ -185,20 +189,21 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="120dp"
                     android:layout_height="150dp"
                     android:src="@drawable/logout" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Đăng Xuất"
+                    android:text="Đăng xuất"
                     android:textAlignment="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="-10dp"
                     android:textColor="@color/teal_700"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-    </GridLayout>
 
+
+    </GridLayout>
 </LinearLayout>

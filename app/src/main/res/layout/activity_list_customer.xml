@@ -16,37 +16,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="KHÁCH HÀNG"
-        app:titleMarginStart="100dp">
+        app:titleMarginStart="70dp">
 
 
     </androidx.appcompat.widget.Toolbar>
 
     <EditText
-        android:hint="Nhập tên khách hàng"
         android:id="@+id/edtSearchCus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/lvKH"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:digits="0123456789ăâôơưđêáàảạãấầẩậẫắằẳặẵóòỏọõốồổộỗớờởợỡúùủũụứừựửữéèẻẽẹếềểễệýỳỷỹỵíìĩịỉabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="Nhập tên khách hàng"
+
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_khadmin" />
 
     <ListView
         android:id="@+id/lvKH"
         android:layout_width="match_parent"
-        android:layout_height="700dp"
+        android:layout_height="600dp"
         android:layout_margin="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/edtSearchCus" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

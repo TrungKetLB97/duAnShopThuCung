@@ -14,12 +14,13 @@
         android:layout_height="wrap_content"
         android:background="@color/purple_700"
         app:title="HÓA ĐƠN"
-        app:titleMarginStart="150dp"/>
+        app:titleMarginStart="70dp"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/searchBill"
         android:layout_margin="8dp"
+        android:digits="0123456789ăâôơưđêáàảạãấầẩậẫắằẳặẵóòỏọõốồổộỗớờởợỡúùủũụứừựửữéèẻẽẹếềểễệýỳỷỹỵíìĩịỉabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:hint="Tìm kiếm hóa đơn theo mã"/>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

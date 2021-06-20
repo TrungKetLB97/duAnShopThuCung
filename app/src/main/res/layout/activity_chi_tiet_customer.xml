@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="CHI TIẾT KHÁCH HÀNG"
-        app:titleMarginStart="100dp"/>
+        app:titleMarginStart="30dp"/>
 
 
 
@@ -38,7 +38,7 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="300dp"
+                android:layout_height="150dp"
                 android:layout_margin="8dp"
                 android:src="@drawable/customer" />
 

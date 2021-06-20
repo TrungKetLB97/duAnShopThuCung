@@ -87,6 +87,9 @@ public class editProductActivity extends AppCompatActivity {
         dao = new ProductDAO(this);
         byte[] productImage = convertImageToByteArray();
         String productName = edtProductName.getText().toString().trim();
+        int productAge = Integer.parseInt(edtProductAge.getText().toString());
+        String productGender = edtProductGender.getText().toString().trim();
+        String productHealth = edtProductHealth.getText().toString().trim();
         double productPrice = Double.parseDouble(edtGia.getText().toString().trim());
         double productWeight =Double.parseDouble( edtProductWeight.getText().toString().trim());
         Product product = new Product(productImage, productCode, productName, productAge,  productWeight, productGender,productHealth,productPrice);

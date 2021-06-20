@@ -38,8 +38,12 @@ public class LoginActivity extends AppCompatActivity {
     public int validateLogin(){
         idLog = edtId.getText().toString();
         passLog = edtPass.getText().toString();
+        if(idLog.equals("") || passLog.equals("")){
+            Toast.makeText(this,"Cannot Login",Toast.LENGTH_SHORT).show();
+        }
         varNv = passwordDAO_nv.checkUser(idLog,passLog);
         varAd = passwordDAO_admin.checkUser(idLog,passLog);
+
         int a = 0;
         if(varAd) {
             a = 1;

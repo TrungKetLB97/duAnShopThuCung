@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@color/purple_700"
         app:title="Thêm đơn hàng"
-        app:titleMarginStart="130dp" />
+        app:titleMarginStart="70dp" />
 
     <GridLayout
         android:id="@+id/graddbill"
@@ -42,6 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="16dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -54,7 +55,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerCustomer"
-                    android:layout_width="200dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center" />
 
@@ -66,6 +67,7 @@
                     android:src="@drawable/ic_baseline_add_circle_24" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+    </GridLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -74,14 +76,15 @@
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_margin="8dp"
+            android:layout_marginTop="150dp"
+            android:paddingTop="40dp"
+            android:layout_marginBottom="20dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="320dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -107,7 +110,7 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="390dp">
+                    android:layout_height="wrap_content">
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rvSanPhamDaChon"
@@ -117,10 +120,10 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-    </GridLayout>
+
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="120dp"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
@@ -156,7 +159,6 @@
             </LinearLayout>
 
             <LinearLayout
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="end">
@@ -166,6 +168,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="DD-MM-YY"
+                    android:inputType="date"
                     android:textSize="20dp" />
 
                 <ImageView
@@ -185,11 +188,12 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="addHoaDon"
-                android:text="Tạo hóa đơn"
                 android:background="@drawable/round_bg"
-                android:textSize="20dp"
-                android:paddingVertical="8dp"/>
+                android:onClick="addHoaDon"
+                android:paddingVertical="8dp"
+                android:layout_marginBottom="1dp"
+                android:text="Tạo hóa đơn"
+                android:textSize="10dp" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

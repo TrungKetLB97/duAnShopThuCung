@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="CHI TIẾT NHÂN VIÊN "
-        app:titleMarginStart="115dp"/>
+        app:titleMarginStart="35dp"/>
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -36,7 +36,7 @@
 <!--            ID-->
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="200dp"
                 android:layout_margin="8dp"
                 android:src="@drawable/staff" />
 

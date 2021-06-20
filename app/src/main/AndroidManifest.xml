@@ -26,12 +26,16 @@
         <activity android:name=".Login.CreateAccNVActivity" />
         <activity android:name=".Login.CreateAccAdminActivity" />
         <activity android:name=".Login.LoginActivity"></activity>
-        <activity android:name=".MainActivity_NV" />
+        <activity android:name=".MainActivity_NV" >
+
+        </activity>
         <activity android:name=".Customer.Customer_NV.ListCustomerActivity_NV" />
         <activity android:name=".Customer.Customer_NV.EditCustomerActivity_NV" />
         <activity android:name=".Customer.Customer_NV.ChiTietCustomerActivity_NV" />
         <activity android:name=".Customer.Customer_NV.AddCustomerActivity_NV" />
-        <activity android:name=".Bill.AddBillActivity" />
+        <activity android:name=".Bill.AddBillActivity" >
+
+        </activity>
         <activity android:name=".Bill.ChiTietBillActivity" />
         <activity android:name=".Bill.EditBillActivity" />
         <activity android:name=".Bill.ListBillActivity" />
@@ -39,15 +43,29 @@
         <activity android:name=".Customer.AddCustomerActivity" />
         <activity android:name=".Customer.ChiTietCustomerActivity" />
         <activity android:name=".Customer.EditCustomerActivity" />
-        <activity android:name=".Customer.ListCustomerActivity" />
-        <activity android:name=".nhanVien.AddNhanVienActivity" />
-        <activity android:name=".nhanVien.EditNhanVienActivity" />
-        <activity android:name=".nhanVien.ChiTietNhanVienActivity" />
+        <activity android:name=".Customer.ListCustomerActivity" >
+
+        </activity>
+        <activity android:name=".nhanVien.AddNhanVienActivity" >
+
+        </activity>
+        <activity android:name=".nhanVien.EditNhanVienActivity">
+
+        </activity>
+        <activity android:name=".nhanVien.ChiTietNhanVienActivity">
+
+        </activity>
         <activity android:name=".nhanVien.ListNhanVienActivity" />
-        <activity android:name=".Product.addProductActivity" />
-        <activity android:name=".Product.editProductActivity" />
+        <activity android:name=".Product.addProductActivity" >
+
+        </activity>
+        <activity android:name=".Product.editProductActivity" >
+
+        </activity>
         <activity android:name=".Product.chiTietThuCung" />
-        <activity android:name=".Product.ListProductActivity" />
+        <activity android:name=".Product.ListProductActivity" >
+
+        </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>

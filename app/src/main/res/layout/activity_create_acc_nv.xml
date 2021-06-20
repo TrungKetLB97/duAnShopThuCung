@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="ĐĂNG KÝ NHÂN VIÊN"
-        app:titleMarginStart="120dp"/>
+        app:titleMarginStart="60dp"/>
 
     <EditText
         android:layout_marginLeft="16dp"

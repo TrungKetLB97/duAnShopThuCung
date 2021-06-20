@@ -46,7 +46,10 @@ public class CreateAccAdminActivity extends AppCompatActivity {
 
     public void AddAccAdmin(View view) {
         Admin admin = new Admin();
-        if(edtRePass.getText().toString().equals(edtPass.getText().toString())){
+        if (edtId.getText().toString().equals("") || edtPass.getText().toString().equals("") || edtRePass.getText().toString().equals("")){
+            Toast.makeText(this,"Cannot create account Admin", Toast.LENGTH_SHORT).show();
+        }
+       else if(edtRePass.getText().toString().equals(edtPass.getText().toString())){
             admin.setIdAdmin(edtId.getText().toString());
             admin.setPasswordAdmin(edtPass.getText().toString());
             passwordDAO_admin.createPassAdmin(admin);

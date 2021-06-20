@@ -17,7 +17,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="Xóa thành công"
-        android:textSize="50dp" />
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/ok"
@@ -26,6 +26,6 @@
         android:layout_gravity="center"
         android:layout_marginVertical="10dp"
         android:text="Xong"
-        android:textSize="30dp"
+        android:textSize="20dp"
         app:backgroundTint="#000000" />
 </LinearLayout>

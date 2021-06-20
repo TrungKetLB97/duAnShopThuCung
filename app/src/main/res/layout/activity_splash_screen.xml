@@ -16,8 +16,8 @@
 
     <TextView
         android:id="@+id/tvLogo"
-        android:layout_width="400dp"
-        android:layout_height="73dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/heroes_legend"
         android:text="Pets Manager"
@@ -30,7 +30,7 @@
         android:id="@+id/tvSlogan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed"
         android:text="Ứng dụng quản lý thú cưng"
         android:textSize="18sp" />

@@ -10,14 +10,14 @@
         android:id="@+id/toolbar_detail_khachHang_nv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#7FFFD4"
+        android:background="#7fffd4"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="CHI TIẾT KHÁCH HÀNG"
-        app:titleMarginStart="100dp"/>
+        app:titleMarginStart="30dp"/>
 
 
 
@@ -37,8 +37,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
                 android:layout_margin="8dp"
                 android:src="@drawable/customer" />
 
@@ -103,4 +103,5 @@
             android:onClick="DeleteKH"
             android:text="Delete" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

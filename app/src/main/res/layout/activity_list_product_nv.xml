@@ -11,25 +11,16 @@
         android:id="@+id/toolbar_nv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#7FFFD4"
+        android:background="#7fffd4"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="THÚ CƯNG"
-        app:titleMarginStart="153dp">
+        app:titleMarginStart="60dp">
 
 
-        <!--        <ImageButton-->
-        <!--            android:id="@+id/thuCung_searchThuCung"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginLeft="100dp"-->
-        <!--            android:background="@color/purple_700"-->
-        <!--            android:onClick="searchThuCung"-->
-        <!--            app:srcCompat="@android:drawable/ic_menu_search"-->
-        <!--            tools:layout_editor_absoluteX="370dp"-->
-        <!--            tools:layout_editor_absoluteY="180dp" />-->
+     >
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
@@ -42,17 +33,19 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="120dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="62dp"
             android:layout_marginRight="5dp"
             android:src="@drawable/thucungbg" />
         <EditText
+            android:digits="0123456789ăâôơưđêáàảạãấầẩậẫắằẳặẵóòỏọõốồổộỗớờởợỡúùủũụứừựửữéèẻẽẹếềểễệýỳỷỹỵíìĩịỉabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/searchProduct_nv"
             android:layout_margin="8dp"
             android:hint="Tìm kiếm sản phẩm theo tên"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/thuCung_rvThuCung_nv"
             android:layout_width="match_parent"

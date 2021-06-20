@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="ĐĂNG KÝ ADMIN"
-        app:titleMarginStart="140dp"/>
+        app:titleMarginStart="70dp"/>
 
 
 
