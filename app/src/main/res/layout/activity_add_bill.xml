@@ -165,18 +165,18 @@
 
                 <EditText
                     android:id="@+id/edNgayTaoDOn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="137dp"
                     android:layout_height="wrap_content"
                     android:hint="DD-MM-YY"
                     android:inputType="date"
                     android:textSize="20dp" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="31dp"
+                    android:layout_height="24dp"
                     android:layout_gravity="center"
                     android:onClick="ngayTaoDon"
-                    android:src="@drawable/abc_vector_test" />
+                    android:src="@drawable/cal" />
             </LinearLayout>
         </LinearLayout>
 
